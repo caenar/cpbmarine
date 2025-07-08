@@ -1,0 +1,67 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/hooks/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: {
+          100: "var(--foreground-100)",
+          200: "var(--foreground-200)",
+          300: "var(--foreground-300)",
+          400: "var(--foreground-400)",
+          500: "var(--foreground-500)",
+          600: "var(--foreground-600)",
+          700: "var(--foreground-700)",
+          800: "var(--foreground-800)",
+          900: "var(--foreground-900)",
+          950: "var(--foreground-950)",
+        },
+        marine: {
+          100: "var(--marine-100)",
+          200: "var(--marine-200)",
+          300: "var(--marine-300)",
+          400: "var(--marine-400)",
+          500: "var(--marine-500)",
+          600: "var(--marine-600)",
+          700: "var(--marine-700)",
+          800: "var(--marine-800)",
+          900: "var(--marine-900)",
+          950: "var(--marine-950)",
+        },
+        gold: {
+          100: "var(--gold-100)",
+          200: "var(--gold-200)",
+          300: "var(--gold-300)",
+          400: "var(--gold-400)",
+          500: "var(--gold-500)",
+          600: "var(--gold-600)",
+          700: "var(--gold-700)",
+          800: "var(--gold-800)",
+          900: "var(--gold-900)",
+          950: "var(--gold-950)",
+        },
+        black: {
+          100: "var(--black-100)",
+          200: "var(--black-200)",
+          300: "var(--black-300)",
+          400: "var(--black-400)",
+          500: "var(--black-500)",
+          600: "var(--black-600)",
+          700: "var(--black-700)",
+          800: "var(--black-800)",
+          900: "var(--black-900)",
+          950: "var(--black-950)",
+        },
+      },
+    },
+  },
+  darkMode: "class",
+  plugins: [],
+} satisfies Config;

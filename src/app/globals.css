@@ -2,25 +2,128 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a233a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-hanken-grotesk);
+  --font-secondary: var(--font-roboto-condensed);
+}
+
+@theme {
+  /* Main colors */
+  --color-background: #ffffff;
+  --color-foreground: #0a233a;
+
+  /* Fonts */
+  --font-sans: "Hanken Grotesk", sans-serif;
+  --font-secondary: "Roboto Condensed", sans-serif;
+
+  /* Marine palette */
+  --color-marine-100: #d0dce9;
+  --color-marine-200: #a6bfd6;
+  --color-marine-300: #7fa3c3;
+  --color-marine-400: #5887b0;
+  --color-marine-500: #366b97;
+  --color-marine-600: #1e4c73;
+  --color-marine-700: #12395c;
+  --color-marine-800: #0a2744;
+  --color-marine-900: #03172e;
+  --color-marine-950: #01142e;
+
+  /* Gold */
+  --color-gold-100: #fff9e5;
+  --color-gold-200: #fff2cc;
+  --color-gold-300: #ffe699;
+  --color-gold-400: #ffd666;
+  --color-gold-500: #ffc233;
+  --color-gold-600: #ebbc0f;
+  --color-gold-700: #d1a10d;
+  --color-gold-800: #b78b0b;
+  --color-gold-900: #806006;
+  --color-gold-950: #4d3903;
+
+  /* Foreground scale */
+  --color-foreground-100: #ffffff;
+  --color-foreground-200: #f9f9f9;
+  --color-foreground-300: #f2f2f2;
+  --color-foreground-400: #ececec;
+  --color-foreground-500: #e6e6e6;
+  --color-foreground-600: #cfcfcf;
+  --color-foreground-700: #b3b3b3;
+  --color-foreground-800: #999999;
+  --color-foreground-900: #7f7f7f;
+  --color-foreground-950: #666666;
+
+  /* Black */
+  --color-black-950: #0c0c0c;
+  --color-black-100: #f2f2f2;
+  --color-black-200: #d9d9d9;
+  --color-black-300: #bfbfbf;
+  --color-black-400: #a6a6a6;
+  --color-black-500: #8c8c8c;
+  --color-black-600: #595959;
+  --color-black-700: #404040;
+  --color-black-800: #262626;
+  --color-black-900: #121212;
+  --color-black-950: #0c0c0c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #01142e;
     --foreground: #ededed;
+
+    --foreground-100: #ffffff;
+    --foreground-200: #f9f9f9;
+    --foreground-300: #f2f2f2;
+    --foreground-400: #ececec;
+    --foreground-500: #e6e6e6;
+    --foreground-600: #cfcfcf;
+    --foreground-700: #b3b3b3;
+    --foreground-800: #999999;
+    --foreground-900: #7f7f7f;
+    --foreground-950: #666666;
+
+    --marine-100: #d0dce9;
+    --marine-200: #a6bfd6;
+    --marine-300: #7fa3c3;
+    --marine-400: #5887b0;
+    --marine-500: #366b97;
+    --marine-600: #1e4c73;
+    --marine-700: #12395c;
+    --marine-800: #0a2744;
+    --marine-900: #03172e;
+    --marine-950: #01142e;
+
+    --gold-100: #fff9e5;
+    --gold-200: #fff2cc;
+    --gold-300: #ffe699;
+    --gold-400: #ffd666;
+    --gold-500: #ffc233;
+    --gold-600: #ebbc0f;
+    --gold-700: #d1a10d;
+    --gold-800: #b78b0b;
+    --gold-900: #806006;
+    --gold-950: #4d3903;
+
+    --black-100: #f2f2f2;
+    --black-200: #d9d9d9;
+    --black-300: #bfbfbf;
+    --black-400: #a6a6a6;
+    --black-500: #8c8c8c;
+    --black-600: #595959;
+    --black-700: #404040;
+    --black-800: #262626;
+    --black-900: #121212;
+    --black-950: #0c0c0c;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
