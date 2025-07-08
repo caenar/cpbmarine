@@ -1,6 +1,8 @@
+"use client";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const links = [
   { label: "Home", href: "/" },
@@ -12,10 +14,38 @@ const links = [
 ];
 
 export default function Nav() {
-  const activePath = usePathname();
+  const [hideNav, setHideNav] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      const threshold = window.innerHeight * 0.3;
+
+      if (currentScroll > threshold) {
+        if (currentScroll > lastScrollY) {
+          setHideNav(true);
+        } else {
+          setHideNav(false);
+        }
+      } else {
+        setHideNav(false);
+      }
+
+      setLastScrollY(currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <div className="flex justify-between items-center py-6 px-16">
+    <div
+      className={cn(
+        "z-50 fixed w-full flex justify-between items-center py-6 px-16 transition-all duration-500",
+        hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      )}
+    >
       <Image
         priority
         src="/logos/landscape_logo.jpg"

@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Roboto_Condensed } from "next/font/google";
+import { Archivo_Narrow, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import Nav from "@/components/nav";
+import { ReactLenis } from "lenis/react";
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hanken-grotesk",
   subsets: ["latin"],
 });
 
-const robotoCondensed = Roboto_Condensed({
-  variable: "--font-roboto-condensed",
+const archiveNarrow = Archivo_Narrow({
+  variable: "--font-archivo-narrow",
   subsets: ["latin"],
 });
 
@@ -26,8 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ReactLenis root />
       <body
-        className={`${hankenGrotesk.variable} ${robotoCondensed.variable} antialiased`}
+        className={`${hankenGrotesk.variable} ${archiveNarrow.variable} antialiased overflow-x-hidden`}
       >
         <Nav />
         {children}
