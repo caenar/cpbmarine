@@ -127,3 +127,20 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 100s linear infinite;
+}
+
+.animate-delay-15s {
+  animation-delay: -6s;
+}

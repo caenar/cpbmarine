@@ -1,0 +1,98 @@
+export const testimonials = [
+  {
+    quote: "Trident delivered excellent underwater welding work. Precise and timely.",
+    name: "William Ashford",
+    position: "Site Supervisor, OceanCore Ltd.",
+    initials: "WA",
+  },
+  {
+    quote: "Their dive crew worked efficiently and followed strict safety protocols.",
+    name: "Andrea Cruz",
+    position: "Operations Manager, Nautilus Energy",
+    initials: "AC",
+  },
+  {
+    quote: "Professional and well-equipped. Our project finished ahead of schedule.",
+    name: "James Santos",
+    position: "Chief Engineer, Marideep Corp.",
+    initials: "JS",
+  },
+  {
+    quote: "A dependable partner for complex marine repairs. Highly recommend.",
+    name: "Marina Reyes",
+    position: "Project Head, SubSea Solutions",
+    initials: "MR",
+  },
+  {
+    quote: "Exceptional support during our hull inspection. Efficient and discreet.",
+    name: "Leo Mendoza",
+    position: "Diving Coordinator, Pacific Ports Inc.",
+    initials: "LM",
+  },
+  {
+    quote: "The team communicated well and executed flawlessly underwater.",
+    name: "Isabelle Tan",
+    position: "Safety Officer, HydroFleet",
+    initials: "IT",
+  },
+  {
+    quote: "We rely on Trident for all our underwater salvage operations. Consistent.",
+    name: "Carlos Navarro",
+    position: "Recovery Lead, Maritime Recovery Group",
+    initials: "CN",
+  },
+  {
+    quote: "They understand the ocean environment deeply. Rare expertise.",
+    name: "Olivia Ramos",
+    position: "Technical Director, OceanAid Foundation",
+    initials: "OR",
+  },
+  {
+    quote: "From documentation to dive execution, they were top-class.",
+    name: "Arman Villanueva",
+    position: "Senior Diver, PortDive Services",
+    initials: "AV",
+  },
+  {
+    quote: "They helped us comply with MARINA standards fast. Smooth coordination.",
+    name: "Jenna Felix",
+    position: "Compliance Officer, BlueBay Shipping",
+    initials: "JF",
+  },
+  {
+    quote: "Trident's underwater video inspection was crystal clear and on-point.",
+    name: "Mikel De Jesus",
+    position: "Marine Surveyor, OceanIQ",
+    initials: "MD",
+  },
+  {
+    quote: "Fast turnaround with excellent documentation and reports.",
+    name: "Samantha Yao",
+    position: "Project Coordinator, CoralWorks PH",
+    initials: "SY",
+  },
+  {
+    quote: "They handled our pipeline inspection perfectly — zero delays.",
+    name: "Nathan Uy",
+    position: "Pipeline Manager, DeepFlow Corp.",
+    initials: "NU",
+  },
+  {
+    quote: "Trident’s dive crew went above and beyond to finish the job safely.",
+    name: "Kristine Lao",
+    position: "Offshore Supervisor, Shell Marine",
+    initials: "KL",
+  },
+  {
+    quote: "Excellent deck coordination with topside crew. Seamless.",
+    name: "Rico Evangelista",
+    position: "Deck Officer, Seaship Holdings",
+    initials: "RE",
+  },
+  {
+    quote: "From pre-dive briefing to post-job reports, it was professional all the way.",
+    name: "Daniel Go",
+    position: "Marine Engineer, PH Docks Ltd.",
+    initials: "DG",
+  },
+];

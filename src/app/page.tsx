@@ -5,6 +5,8 @@ import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Anvil, Bubbles, Droplet, Waves } from "lucide-react";
+import { testimonials } from "@/lib/data/testimonials";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,6 +69,25 @@ export default function Home() {
 
     return () => ctx.revert();
   }, []);
+
+  const affiliations = [
+    {
+      label: "Pacific Underwater Construction",
+      icon: Bubbles,
+    },
+    {
+      label: "Maritime Industry Authority",
+      icon: Waves,
+    },
+    {
+      label: "Philippine Coast Guard",
+      icon: Anvil,
+    },
+    {
+      label: "Subic Bay Dive Center",
+      icon: Droplet,
+    },
+  ];
 
   return (
     <main>
@@ -147,7 +168,7 @@ export default function Home() {
             "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
         }}
       >
-        <div className="px-[22vw]">
+        <div className="px-[20vw]">
           <h2 className="font-secondary font-bold text-5xl text-balance mb-5">
             Lorem ipsum dolor sit amet
           </h2>
@@ -159,7 +180,7 @@ export default function Home() {
 
         <div className="w-full h-px bg-marine-700 my-12"></div>
 
-        <div className="flex gap-7 px-[22vw]">
+        <div className="flex gap-7 px-[20vw]">
           <div>
             <Image
               className="rounded-lg w-full object-cover"
@@ -172,7 +193,7 @@ export default function Home() {
           <div>
             <h3 className="font-bold text-md text-gold-400 mb-1">Our Mission</h3>
             <h2 className="font-bold text-3xl mb-5">Lorem ipsum dolor sit consectetur</h2>
-            <p className="text-foreground-600 leading-relaxed max-w-prose">
+            <p className="text-foreground-600 leading-relaxed text-balance w-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid iure
               maxime, beata accusantium nobis dicta. Officiis, earum tenetur voluptatum
               explicabo consectetur labore!
@@ -182,11 +203,11 @@ export default function Home() {
 
         <div className="w-full h-px bg-marine-700 my-12"></div>
 
-        <div className="flex gap-7 px-[22vw]">
+        <div className="flex gap-7 px-[20vw]">
           <div>
             <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
             <h2 className="font-bold text-3xl mb-5">Lorem ipsum dolor sit amet</h2>
-            <p className="text-foreground-600 leading-relaxed text-balance max-w-prose">
+            <p className="text-foreground-600 leading-relaxed text-balance w-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatem
               quaerat asperiores molestias deserunt hic sint nisi dolor aliquam aspernatur
               molestiae a, quia qui impedit soluta tempora?
@@ -204,11 +225,98 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        
+      <section className="flex flex-col bg-black justify-center items-center py-32 h-[10vh]">
+        <h2 className="font-secondary text-xl uppercase font-bold text-marine-100">
+          Our Affiliates
+        </h2>
+        <div className="flex flex-wrap py-10 px-6">
+          {affiliations.map((affil, idx) => (
+            <>
+              <div key={idx} className="flex gap-5 items-center max-w-[28ch]">
+                <affil.icon
+                  size={42}
+                  strokeWidth={1.5}
+                  className="text-marine-300 shrink-0"
+                />
+                <h3 className="font-bold text-xl text-marine-300 text-balance">
+                  {affil.label}
+                </h3>
+              </div>
+              {affiliations.length - 1 !== idx && (
+                <div className="h-full w-px bg-foreground-950 mx-10"></div>
+              )}
+            </>
+          ))}
+        </div>
       </section>
 
-      <section className="h-screen bg-black"></section>
+      <section className="flex flex-col bg-black py-32 px-[22vw] justify-center items-center">
+        <div className="max-w-[75ch] mb-18">
+          <h2 className="text-marine-100 font-bold font-secondary text-7xl text-center mb-5 text-balance">
+            What they say about us
+          </h2>
+          <p className="text-gray-300 text-center">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe eius
+            provident, officia laudantium similique consequuntur itaque accusantium nemo
+            fugit.
+          </p>
+        </div>
+
+        <div className="grid grid-rows-2 gap-6">
+          {[0, 1].map((row) => {
+            const rowTestimonials = testimonials.filter((_, i) => i % 2 === row);
+
+            return (
+              <div key={row} className="relative w-[65vw] overflow-hidden">
+                {/* Gradient fade overlays */}
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-50 bg-gradient-to-r from-black to-transparent z-10" />
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-50 bg-gradient-to-l from-black to-transparent z-10" />
+
+                {/* Marquee row */}
+                <div
+                  className={`
+      flex gap-6 w-max animate-marquee-left
+      ${row === 1 ? "animate-delay-15s" : ""}
+    `}
+                >
+                  {[...rowTestimonials, ...rowTestimonials].map((t, idx) => (
+                    <div
+                      key={`${row}-${idx}`}
+                      className="flex flex-col justify-between border border-black-800 bg-black-950 w-sm h-[180px] rounded-lg p-5 min-w-[300px]"
+                    >
+                      <h3 className="text-md leading-snug text-balance">{t.quote}</h3>
+                      <div className="flex justify-between items-center mt-4">
+                        <div>
+                          <h4 className="font-medium text-sm">{t.name}</h4>
+                          <p className="text-gray-400 text-sm">{t.position}</p>
+                        </div>
+                        <div className="flex justify-center items-center rounded-full h-10 w-10 bg-marine-500">
+                          <span className="text-sm">{t.initials}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section
+        className="h-screen px-[20vw] py-32"
+        style={{
+          background:
+            "linear-gradient(-180deg,rgba(0, 0, 0, 1) 0%, rgba(3, 34, 66, 1) 100%)",
+        }}
+      >
+        <h2 className="text-4xl font-bold font-secondary mb-4">Safety Standards</h2>
+        <p className="text-foreground-600 leading-relaxed text-balance max-w-prose">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatem quaerat
+          asperiores molestias deserunt hic sint nisi dolor aliquam aspernatur molestiae
+          a, quia qui impedit soluta tempora?
+        </p>
+      </section>
     </main>
   );
 }
