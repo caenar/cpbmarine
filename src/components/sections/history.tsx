@@ -91,16 +91,25 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[rgba(3,_34,_66,_1)] py-32">
+    <section
+      ref={sectionRef}
+      className="bg-[rgba(3,_34,_66,_1)] py-32 flex flex-col"
+    >
       <div className="px-[18vw]">
-        <h2 ref={titleRef} className="text-7xl font-secondary font-black text-balance">
+        <h2
+          ref={titleRef}
+          className="text-7xl max-w-3xl font-secondary font-black text-balance"
+        >
           The History of Conrad Paz Marine Solutions
         </h2>
       </div>
 
       <div ref={dividerRef} className="w-0 h-px bg-marine-700 my-12"></div>
 
-      <div ref={founderRef} className="flex items-center gap-10 px-[18vw] mb-32">
+      <div
+        ref={founderRef}
+        className="flex items-center gap-10 px-[18vw] mb-32"
+      >
         <Image
           className="rounded-lg h-[300px] w-[500px] object-cover"
           src="/images/founder.jpg"
@@ -110,53 +119,53 @@ export default function HistorySection() {
         />
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
-            &quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quo
-            laboriosam voluptatem veritatis voluptates aspernatur&quot;
+            &quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Officia quo laboriosam voluptatem veritatis voluptates
+            aspernatur&quot;
           </h3>
           <p className="font-bold">Conrad Paz</p>
           <p className="text-foreground-400">Founder, CBP Marine Solutions</p>
         </div>
       </div>
 
-      <div
-        ref={timelineSectionRef}
-        className="flex flex-col gap-30 relative bg-[rgba(3,_34,_66,_1)]"
-      >
-        <div
-          ref={timelineLineRef}
-          className="absolute left-1/2 transform -translate-x-1/2 h-0 w-[1.5px] bg-marine-800"
-        />
+      <div className="relative flex flex-col gap-20 bg-[rgba(3,_34,_66,_1)]">
+        {/* vertical line */}
+        <div className="left-[50%] w-[1.2px] bg-foreground-800 h-full absolute" />
 
+        {/* items */}
         {timeline.map((item, idx) => {
           const isEven = idx % 2 === 0;
+
           return (
             <div
               key={idx}
-              ref={(el) => {
-                if (el) timelineWrappersRef.current[idx] = el;
-              }}
-              className={`relative flex items-start justify-center gap-5 overflow-hidden ${
-                isEven ? "flex-row pl-[9.1vw]" : "flex-row-reverse pr-[9.1vw]"
-              }`}
+              className={cn(
+                "self-center relative flex gap-5",
+                isEven ? "flex" : "flex-row-reverse",
+              )}
             >
-              <div
-                className={cn(
-                  "w-[150px] pr-4 shrink-0",
-                  isEven ? "text-right" : "text-left"
-                )}
-              >
-                <h4 className="font-secondary font-bold text-white">{item.date}</h4>
+              <div className="w-xs shrink-0">
+                <h4
+                  className={cn(
+                    "font-secondary font-bold text-white",
+                    isEven ? "text-right" : "text-left",
+                  )}
+                >
+                  {item.date}
+                </h4>
               </div>
 
-              <div className="relative z-10 shrink-0">
+              <div key={`divider-${idx}`} className="relative z-10 shrink-0">
                 <div className="bg-gold-500 rounded-full h-5 w-5 border-6 border-[rgba(3,_34,_66,_1)]" />
               </div>
 
-              <div className="bg-foreground-100 py-4 px-6 rounded shadow-lg max-w-xs">
+              <div className="w-xs bg-foreground-100 py-4 px-6">
                 <h4 className="font-bold font-secondary text-xl text-marine-800 mb-1">
                   {item.title}
                 </h4>
-                <p className="text-foreground-600 text-sm">{item.description}</p>
+                <p className="text-foreground-600 text-sm">
+                  {item.description}
+                </p>
               </div>
             </div>
           );

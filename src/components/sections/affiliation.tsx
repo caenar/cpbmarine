@@ -96,7 +96,7 @@ export default function AffiliationSection() {
                 ref={(el) => {
                   if (el) dividerRefs.current[idx] = el;
                 }}
-                className="h-0 w-px bg-foreground-950 mx-10"
+                className="h-0 w-[1.5px] bg-foreground-950 mx-10"
               ></div>
             )}
           </React.Fragment>

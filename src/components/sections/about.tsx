@@ -28,8 +28,8 @@ export default function AboutSection() {
         stagger: 0.15,
         scrollTrigger: {
           trigger: introRef.current,
-          start: "top 80%",
-          end: "bottom center",
+          start: "top 60%",
+          end: "bottom 50%",
           scrub: true,
         },
       });
@@ -42,8 +42,8 @@ export default function AboutSection() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: missionRef.current,
-          start: "top 80%",
-          end: "bottom center",
+          start: "top 60%",
+          end: "bottom 50%",
           scrub: true,
         },
       });
@@ -55,22 +55,23 @@ export default function AboutSection() {
         ease: "power2.out",
         stagger: 0.2,
         scrollTrigger: {
-          trigger: missionRef.current,
-          start: "bottom 80%",
-          end: "bottom center",
+          trigger: visionRef.current,
+          start: "top 60%",
+          end: "bottom 50%",
           scrub: true,
         },
       });
 
-      dividerRefs.forEach((ref, index) => {
+      dividerRefs.forEach((ref) => {
         gsap.to(ref.current, {
           width: "100%",
           duration: 1,
+          stagger: 0.1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: ref.current,
-            start: `${40 + index * 20}% 90%`,
-            end: "bottom center",
+            start: `top 60%`,
+            end: "bottom 30%",
             scrub: true,
           },
         });
@@ -85,7 +86,8 @@ export default function AboutSection() {
       ref={sectionRef}
       className="flex flex-col items-start justify-center bg-marine-900 py-32"
       style={{
-        background: "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
+        background:
+          "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
       }}
     >
       <div ref={introRef} className="px-[20vw]">
@@ -93,8 +95,8 @@ export default function AboutSection() {
           Lorem ipsum dolor sit amet
         </h2>
         <p className="text-foreground-600 text-lg max-w-prose">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?
-          Dignissimos ducimus necessitatibus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+          qui? Dignissimos ducimus necessitatibus?
         </p>
       </div>
 
@@ -112,11 +114,13 @@ export default function AboutSection() {
         </div>
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Mission</h3>
-          <h2 className="font-bold text-3xl mb-5">Lorem ipsum dolor sit consectetur</h2>
+          <h2 className="font-bold text-3xl mb-5">
+            Lorem ipsum dolor sit consectetur
+          </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid iure
-            maxime, beata accusantium nobis dicta. Officiis, earum tenetur voluptatum
-            explicabo consectetur labore!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid
+            iure maxime, beata accusantium nobis dicta. Officiis, earum tenetur
+            voluptatum explicabo consectetur labore!
           </p>
         </div>
       </div>
@@ -126,11 +130,13 @@ export default function AboutSection() {
       <div ref={visionRef} className="flex gap-7 px-[20vw]">
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
-          <h2 className="font-bold text-3xl mb-5">Lorem ipsum dolor sit amet</h2>
+          <h2 className="font-bold text-3xl mb-5">
+            Lorem ipsum dolor sit amet
+          </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatem
-            quaerat asperiores molestias deserunt hic sint nisi dolor aliquam aspernatur
-            molestiae a, quia qui impedit soluta tempora?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            voluptatem quaerat asperiores molestias deserunt hic sint nisi dolor
+            aliquam aspernatur molestiae a, quia qui impedit soluta tempora?
           </p>
         </div>
         <div>
