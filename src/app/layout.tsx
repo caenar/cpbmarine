@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Nav from "@/components/nav";
 import { ReactLenis } from "lenis/react";
+import Footer from "@/components/footer";
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hanken-grotesk",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
