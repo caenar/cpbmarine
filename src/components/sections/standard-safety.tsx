@@ -29,34 +29,42 @@ export default function StandardSafetySection() {
           scrub: true,
         },
       });
-    }, sectionRef);
 
-    const sections = mainSectionRef.current?.querySelectorAll("div");
-
-    sections?.forEach((container, idx) => {
-      const image = container.querySelector(".placeholder");
-
-      gsap.to(image, {
-        height: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: container,
-          start: `center 40%`,
+      itemsRef.current.forEach((img) => {
+        ScrollTrigger.create({
+          trigger: img.parentElement,
+          start: "top 40%",
           end: "bottom 30%",
           scrub: true,
           markers: true,
-        },
-      });
-    }, mainSectionRef);
 
-    return () => ctx.revert();
+          onUpdate(self) {
+            const progress = self.progress ?? 0;
+            const height = (1 - progress) * 300;
+            gsap.set(img, { height: `${height}px` });
+          },
+
+          onLeave() {
+            gsap.set(img, { display: "none" });
+          },
+
+          onEnterBack() {
+            gsap.set(img, { display: "block" });
+          },
+        });
+      });
+    }, sectionRef);
+
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="grid grid-cols-2 px-[20vw] py-32"
+      className="sticky grid grid-cols-2 px-[20vw] py-32"
       style={{
         background:
           "linear-gradient(-180deg,rgba(0, 0, 0, 1) 0%, rgba(3, 34, 66, 1) 100%)",
@@ -74,19 +82,18 @@ export default function StandardSafetySection() {
 
       <div ref={mainSectionRef} className="flex flex-col">
         {Array.from({ length: 5 }).map((_, idx) => (
-          <div
-            ref={(el) => {
-              if (el) itemsRef.current[idx] = el;
-            }}
-            key={idx}
-            className="relative"
-          >
+          <div key={idx} className="relative">
             {/* Placeholder visual block */}
-            <div className="placeholder w-full h-[300px] bg-white" />
+            <div
+              ref={(el) => {
+                if (el) itemsRef.current[idx] = el;
+              }}
+              className="placeholder h-[300px] w-full bg-white"
+            />
 
             {/* Sticky text block */}
             <div
-              className="sticky bg-black text-white p-6 z-10 rounded shadow"
+              className="bg-black text-white p-6 z-10 rounded shadow"
               style={{ top: `${5 + idx * 5}vh` }} // stacking effect
             >
               <h3 className="text-xl font-bold text-gold-400 mb-2">
