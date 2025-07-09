@@ -10,11 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function StandardSafetySection() {
   const sectionRef = useRef(null);
   const introRef = useRef<HTMLDivElement | null>(null);
-  const itemRefs = useRef<HTMLLIElement[]>([]);
-  const dividerRefs = useRef<HTMLDivElement[]>([]);
 
-  const titleRefs = useRef<HTMLHeadingElement[]>([]);
-  const descRefs = useRef<HTMLParagraphElement[]>([]);
+  const mainSectionRef = useRef<HTMLDivElement | null>(null);
+  const itemsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,63 +29,26 @@ export default function StandardSafetySection() {
           scrub: true,
         },
       });
-
-      gsap.from(titleRefs.current, {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "30% 40%",
-          end: "80% 30%",
-          scrub: true,
-        },
-      });
-
-      gsap.from(descRefs.current, {
-        opacity: 0,
-        y: 20,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "30% 40%",
-          end: "80% 30%",
-          scrub: true,
-        },
-      });
-
-      gsap.from(itemRefs.current, {
-        opacity: 0,
-        y: 20,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "30% 40%",
-          end: "80% 30%",
-          scrub: true,
-        },
-      });
-
-      dividerRefs.current.forEach((ref) => {
-        gsap.from(ref, {
-          width: 0,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ref,
-            start: "20% 40%",
-            end: "center 30%",
-            scrub: true,
-          },
-        });
-      });
     }, sectionRef);
+
+    const sections = mainSectionRef.current?.querySelectorAll("div");
+
+    sections?.forEach((container, idx) => {
+      const image = container.querySelector(".placeholder");
+
+      gsap.to(image, {
+        height: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container,
+          start: `center 40%`,
+          end: "bottom 30%",
+          scrub: true,
+          markers: true,
+        },
+      });
+    }, mainSectionRef);
 
     return () => ctx.revert();
   }, []);
@@ -95,62 +56,52 @@ export default function StandardSafetySection() {
   return (
     <section
       ref={sectionRef}
-      className="grid grid-cols-2 h-screen px-[20vw] py-32"
+      className="grid grid-cols-2 px-[20vw] py-32"
       style={{
         background:
           "linear-gradient(-180deg,rgba(0, 0, 0, 1) 0%, rgba(3, 34, 66, 1) 100%)",
       }}
     >
       <div ref={introRef}>
-        <h2 className="text-4xl font-bold font-secondary mb-4">Safety Standards</h2>
+        <h2 className="text-4xl font-bold font-secondary mb-4">
+          Safety Standards
+        </h2>
         <p className="text-foreground-600 leading-relaxed text-balance max-w-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatem quaerat
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+          voluptatem quaerat
         </p>
       </div>
 
-      <div className="flex flex-col">
-        {safetyStandards.slice(3).map((standard, idx) => (
-          <React.Fragment key={`safetyStandard-${idx}`}>
-            <div>
-              <h3
-                ref={(el) => {
-                  if (el) titleRefs.current.push(el);
-                }}
-                className="font-bold text-xl text-gold-400"
-              >
-                {standard.title}
-              </h3>{" "}
-              <p
-                ref={(el) => {
-                  if (el) descRefs.current.push(el);
-                }}
-                className="text-foreground-500 mb-3"
-              >
-                {standard.description}
+      <div ref={mainSectionRef} className="flex flex-col">
+        {Array.from({ length: 5 }).map((_, idx) => (
+          <div
+            ref={(el) => {
+              if (el) itemsRef.current[idx] = el;
+            }}
+            key={idx}
+            className="relative"
+          >
+            {/* Placeholder visual block */}
+            <div className="placeholder w-full h-[300px] bg-white" />
+
+            {/* Sticky text block */}
+            <div
+              className="sticky bg-black text-white p-6 z-10 rounded shadow"
+              style={{ top: `${5 + idx * 5}vh` }} // stacking effect
+            >
+              <h3 className="text-xl font-bold text-gold-400 mb-2">
+                Section {idx + 1}
+              </h3>
+              <p className="text-foreground-500 mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <ul className="list-disc pl-5 text-foreground-600 space-y-1">
-                {standard.items.map((point, i) => (
-                  <li
-                    key={i}
-                    ref={(el) => {
-                      if (el) itemRefs.current.push(el);
-                    }}
-                  >
-                    {point}
-                  </li>
-                ))}
+                <li>Point 1</li>
+                <li>Point 2</li>
+                <li>Point 3</li>
               </ul>
             </div>
-
-            {safetyStandards.slice(3).length - 1 !== idx && (
-              <div
-                ref={(el) => {
-                  if (el) dividerRefs.current.push(el);
-                }}
-                className="h-px w-full bg-foreground-950 my-7"
-              ></div>
-            )}
-          </React.Fragment>
+          </div>
         ))}
       </div>
     </section>

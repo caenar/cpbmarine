@@ -17,7 +17,7 @@ export default function TestimonialSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: testSectionRef.current,
-          start: "center 40%",
+          start: "20% 40%",
           end: "80% 30%",
           scrub: true,
         },
@@ -37,8 +37,9 @@ export default function TestimonialSection() {
           What they say about us
         </h2>
         <p className="text-gray-300 text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe eius provident,
-          officia laudantium similique consequuntur itaque accusantium nemo fugit.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe eius
+          provident, officia laudantium similique consequuntur itaque
+          accusantium nemo fugit.
         </p>
       </div>
 
@@ -62,7 +63,9 @@ export default function TestimonialSection() {
                     key={`${row}-${idx}`}
                     className="flex flex-col justify-between border border-black-800 bg-black-950 w-sm h-[180px] rounded-lg p-5 min-w-[300px]"
                   >
-                    <h3 className="text-md leading-snug text-balance">{t.quote}</h3>
+                    <h3 className="text-md leading-snug text-balance">
+                      {t.quote}
+                    </h3>
                     <div className="flex justify-between items-center mt-4">
                       <div>
                         <h4 className="font-medium text-sm">{t.name}</h4>

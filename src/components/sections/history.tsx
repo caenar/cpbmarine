@@ -62,8 +62,8 @@ export default function HistorySection() {
         ease: "none",
         scrollTrigger: {
           trigger: timelineSectionRef.current,
-          start: "center 40%",
-          end: "bottom 20%",
+          start: "20% center",
+          end: "bottom center",
           scrub: true,
         },
       });
@@ -74,13 +74,13 @@ export default function HistorySection() {
         gsap.from(targets, {
           opacity: 0,
           y: 50,
-          duration: 0.8,
+          duration: 0.7,
           ease: "power2.out",
-          stagger: 0.5,
+          stagger: 0.1,
           scrollTrigger: {
-            trigger: timelineSectionRef.current,
-            start: "20% 40%",
-            end: "80% 35%",
+            trigger: wrapper,
+            start: "top 40%",
+            end: "bottom 10%",
             scrub: true,
           },
         });
@@ -128,9 +128,15 @@ export default function HistorySection() {
         </div>
       </div>
 
-      <div className="relative flex flex-col gap-20 bg-[rgba(3,_34,_66,_1)]">
+      <div
+        ref={timelineSectionRef}
+        className="relative flex flex-col gap-20 bg-[rgba(3,_34,_66,_1)]"
+      >
         {/* vertical line */}
-        <div className="left-[50%] w-[1.2px] bg-foreground-800 h-full absolute" />
+        <div
+          ref={timelineLineRef}
+          className="left-[50%] w-[1.2px] bg-foreground-800 h-0 absolute"
+        />
 
         {/* items */}
         {timeline.map((item, idx) => {
@@ -139,6 +145,9 @@ export default function HistorySection() {
           return (
             <div
               key={idx}
+              ref={(el) => {
+                if (el) timelineWrappersRef.current[idx] = el;
+              }}
               className={cn(
                 "self-center relative flex gap-5",
                 isEven ? "flex" : "flex-row-reverse",
@@ -159,7 +168,7 @@ export default function HistorySection() {
                 <div className="bg-gold-500 rounded-full h-5 w-5 border-6 border-[rgba(3,_34,_66,_1)]" />
               </div>
 
-              <div className="w-xs bg-foreground-100 py-4 px-6">
+              <div className="w-xs bg-foreground-100 py-4 px-6 rounded overflow-hidden">
                 <h4 className="font-bold font-secondary text-xl text-marine-800 mb-1">
                   {item.title}
                 </h4>
