@@ -1,7 +1,7 @@
 "use client";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -55,11 +55,15 @@ export default function Nav() {
       />
       <nav>
         <ul className="flex gap-15 items-center font-bold font-secondary">
-          {links.map((li, idx) => (
-            <Link key={`${li}-${idx}`} href={li.href}>
-              <li>{li.label}</li>
-            </Link>
-          ))}
+          {links.map((li, idx) => {
+            // const isActive = activePath === li.href;
+
+            return (
+              <Link key={`${li}-${idx}`} href={li.href}>
+                <li>{li.label}</li>
+              </Link>
+            );
+          })}
         </ul>
       </nav>
     </div>
