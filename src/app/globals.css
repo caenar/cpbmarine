@@ -132,6 +132,7 @@ body {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -143,4 +144,9 @@ body {
 
 .animate-delay-15s {
   animation-delay: -6s;
+}
+
+.clip-target {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.3s ease-out;
 }

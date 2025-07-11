@@ -1,6 +1,7 @@
 export const safetyStandards = [
   {
     title: "DOLE OSH Standards",
+    img: "/images/safety-standards/1.jpg",
     description:
       "Compliant with the Department of Labor and Employment’s Occupational Safety and Health (OSH) Standards.",
     items: [
@@ -11,6 +12,7 @@ export const safetyStandards = [
   },
   {
     title: "IMCA Guidelines",
+    img: "/images/safety-standards/2.jpg",
     description:
       "Following International Marine Contractors Association (IMCA) standards for commercial diving.",
     items: [
@@ -21,7 +23,9 @@ export const safetyStandards = [
   },
   {
     title: "Philippine Coast Guard Compliance",
-    description: "All marine operations meet PCG protocols and safety mandates.",
+    img: "/images/safety-standards/3.png",
+    description:
+      "All marine operations meet PCG protocols and safety mandates.",
     items: [
       "Permit acquisition and route approvals",
       "Compliance with vessel safety standards",
@@ -30,39 +34,13 @@ export const safetyStandards = [
   },
   {
     title: "Diver Certification & Training",
+    img: "/images/safety-standards/4.jpg",
     description:
       "Divers meet national and international standards of competency and health.",
     items: [
       "Certified by institutions like IDSA, IMCA, or Philippine Navy Diving School",
       "Regular refresher courses and underwater rescue training",
       "Annual physical and hyperbaric medical evaluations",
-    ],
-  },
-  {
-    title: "Emergency Response Protocols",
-    description: "Preparedness is ensured for any incident during operations.",
-    items: [
-      "Standby diver with full gear on site",
-      "Oxygen kits and trauma packs readily available",
-      "Designated emergency evacuation routes and personnel",
-    ],
-  },
-  {
-    title: "Risk Assessment",
-    description: "Proactive hazard analysis before and during operations.",
-    items: [
-      "Pre-dive briefings and toolbox talks conducted daily",
-      "Dive logs and checklists maintained strictly",
-      "Incident reports documented and reviewed for prevention",
-    ],
-  },
-  {
-    title: "Environmental & Marine Ethics",
-    description: "Committed to sustainable underwater operations.",
-    items: [
-      "Use of minimal-impact materials and anchoring",
-      "Avoidance of coral reef damage and marine disruption",
-      "Waste management protocols enforced on vessels",
     ],
   },
 ];

@@ -88,8 +88,8 @@ export default function HeaderSection() {
             className="pointer-events-none select-none max-w-none"
             src="/images/underwater_guy.png"
             alt="Picture of a diver"
-            width={1200}
-            height={1200}
+            width={1350}
+            height={1350}
             style={{ translate: "-8vw 6vh" }}
           />
         </motion.div>
