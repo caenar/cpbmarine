@@ -11,10 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function HeaderSection() {
   const containerRef = useRef(null);
   const headerRef = useRef(null);
-  const conradRef = useRef(null);
-  const pazRef = useRef(null);
-  const marineRef = useRef(null);
-  const servicesRef = useRef(null);
   const diverRef2 = useRef(null);
 
   useEffect(() => {
@@ -26,21 +22,6 @@ export default function HeaderSection() {
           end: "+=150%",
           scrub: true,
         },
-      });
-
-      const textRefs = [
-        conradRef.current,
-        pazRef.current,
-        marineRef.current,
-        servicesRef.current,
-      ];
-
-      tl.to(textRefs, {
-        translateY: "100vh",
-        opacity: 0,
-        duration: 1,
-        stagger: 0.05,
-        ease: "power2.out",
       });
 
       tl.to(
@@ -60,72 +41,19 @@ export default function HeaderSection() {
 
   return (
     <>
-      <header ref={headerRef} className="relative flex justify-center">
-        <div
-          className="absolute inset-0 pointer-events-none z-2"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, transparent 60%, var(--color-marine-900))",
-            mixBlendMode: "multiply",
-          }}
-        />
-
-        <div className="absolute bottom-0 w-full h-64 bg-gradient-to-t from-[var(--color-marine-900)] via-transparent to-transparent pointer-events-none z-2" />
-
-        <div className="absolute top-0 w-full h-64 bg-gradient-to-b from-marine-950 via-marine-950/70 to-transparent pointer-events-none z-3" />
-
-        <motion.div
-          animate={{ translateX: [0, 5, -5, 0], translateY: [0, -5, 0] }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-          }}
-          className="absolute h-screen w-full flex justify-center items-center overflow-hidden z-1"
-        >
-          <Image
-            className="pointer-events-none select-none max-w-none"
-            src="/images/underwater_guy.png"
-            alt="Picture of a diver"
-            width={1350}
-            height={1350}
-            style={{ translate: "-8vw 6vh" }}
-          />
-        </motion.div>
-
-        <div
-          ref={containerRef}
-          className="absolute h-full w-full grid grid-cols-8 grid-rows-9 px-10"
-        >
-          <span
-            ref={conradRef}
-            className="font-bold font-secondary text-[clamp(4rem,9vw,15rem)] leading-[0.7] row-start-3 col-span-3"
-          >
-            CONRAD
+      <header
+        ref={headerRef}
+        className="relative flex justify-center min-h-screen"
+      >
+        <div className="grid p-12 grid-cols-4 grid-rows-5 items-center w-full font-secondary">
+          <span className="row-start-2 col-start-2 text-right justify-self-start uppercase font-bold text-5xl leading-[1]">
+            Golden <br />
+            Trident <br /> Salvage
           </span>
-          <span
-            ref={pazRef}
-            className="font-bold font-secondary text-[clamp(4rem,9vw,15rem)] leading-[0.7] row-start-4 col-start-6 col-span-3 text-right"
-          >
-            PAZ
-          </span>
-          <span
-            ref={marineRef}
-            className="font-bold font-secondary text-[clamp(4rem,9vw,15rem)] leading-[0.7] row-start-6 col-span-3"
-          >
-            MARINE
-          </span>
-          <span
-            ref={servicesRef}
-            className="font-bold font-secondary text-[clamp(4rem,9vw,15rem)] leading-[0.7] row-start-7 col-start-5 col-span-4 text-right"
-          >
-            SERVICES
+          <span className="justify row-start-4 col-start-3 justify-self-end uppercase font-bold text-5xl leading-[1]">
+            Conrado <br /> Paz Marine <br /> Services
           </span>
         </div>
-
-        {/* background */}
-        <div className="min-h-screen w-full bg-[url(/images/underwater_bg2.png)] bg-no-repeat bg-cover"></div>
       </header>
 
       <section className="flex justify-center items-center h-screen">
