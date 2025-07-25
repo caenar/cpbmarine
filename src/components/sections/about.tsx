@@ -92,11 +92,13 @@ export default function AboutSection() {
     >
       <div ref={introRef} className="px-[20vw]">
         <h2 className="font-secondary font-bold text-5xl text-balance mb-5">
-          Lorem ipsum dolor sit amet
+          Trusted Underwater Solutions Since 2012
         </h2>
         <p className="text-foreground-600 text-lg max-w-prose">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
-          qui? Dignissimos ducimus necessitatibus?
+          Trident CBP Marine Service delivers expert underwater services — from
+          salvage and welding to scientific surveys — with a commitment to
+          quality, affordability, and safety. Proudly serving industries
+          nationwide since 2012.
         </p>
       </div>
 
@@ -114,13 +116,16 @@ export default function AboutSection() {
         </div>
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Mission</h3>
-          <h2 className="font-bold text-3xl mb-5">
-            Lorem ipsum dolor sit consectetur
+          <h2 className="font-bold text-3xl mb-5 text-balance max-w-prose">
+            Affordable and Reliable Marine Expertise, Delivered Safely
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid
-            iure maxime, beata accusantium nobis dicta. Officiis, earum tenetur
-            voluptatum explicabo consectetur labore!
+            At Trident CBP Marine Service, our mission is to deliver
+            high-quality underwater services that are accessible and
+            cost-effective, without compromising safety. Since 2012, we've
+            supported marine operations through expert salvage, maintenance,
+            construction, and training — always guided by professionalism,
+            innovation, and a deep respect for the marine environment.
           </p>
         </div>
       </div>
@@ -130,13 +135,13 @@ export default function AboutSection() {
       <div ref={visionRef} className="flex gap-7 px-[20vw]">
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
-          <h2 className="font-bold text-3xl mb-5">
-            Lorem ipsum dolor sit amet
+          <h2 className="font-bold text-3xl mb-5 text-balance max-w-prose">
+            Setting the Standard for Safe and Affordable Underwater Solutions
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-            voluptatem quaerat asperiores molestias deserunt hic sint nisi dolor
-            aliquam aspernatur molestiae a, quia qui impedit soluta tempora?
+            To be the Philippines’ leading partner in reliable, affordable, and
+            safe underwater solutions — trusted by industries and institutions
+            for our commitment to service excellence and operational integrity.
           </p>
         </div>
         <div>
