@@ -1,20 +1,24 @@
-import { Anvil, Bubbles, Droplet, Waves } from "lucide-react";
+import { Anvil, Bubbles, Droplet, GlassWater, Waves } from "lucide-react";
 
 export const affiliations = [
   {
-    label: "Pacific Underwater Construction",
+    label: "DTI Registered",
     icon: Bubbles,
   },
   {
-    label: "Maritime Industry Authority",
+    label: "PhilGEPS Registered",
     icon: Waves,
   },
   {
-    label: "Philippine Coast Guard",
+    label: "TESDA Certified Workforce",
     icon: Anvil,
   },
   {
-    label: "Subic Bay Dive Center",
+    label: "PCAB Accredited",
     icon: Droplet,
+  },
+  {
+    label: "PADI Training Provider",
+    icon: GlassWater,
   },
 ];

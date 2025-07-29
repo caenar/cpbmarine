@@ -79,12 +79,13 @@ export default function AboutSection() {
     }, sectionRef);
 
     return () => ctx.revert();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col items-start justify-center bg-marine-900 py-32"
+      className="flex flex-col items-start justify-center bg-marine-900 pt-36 pb-44"
       style={{
         background:
           "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
@@ -116,13 +117,13 @@ export default function AboutSection() {
         </div>
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Mission</h3>
-          <h2 className="font-bold text-3xl mb-5 text-balance max-w-prose">
+          <h2 className="font-bold text-3xl mb-5 text-balance max-w-lg">
             Affordable and Reliable Marine Expertise, Delivered Safely
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
             At Trident CBP Marine Service, our mission is to deliver
             high-quality underwater services that are accessible and
-            cost-effective, without compromising safety. Since 2012, we've
+            cost-effective, without compromising safety. Since 2012, we&apos;ve
             supported marine operations through expert salvage, maintenance,
             construction, and training — always guided by professionalism,
             innovation, and a deep respect for the marine environment.
@@ -135,7 +136,7 @@ export default function AboutSection() {
       <div ref={visionRef} className="flex gap-7 px-[20vw]">
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
-          <h2 className="font-bold text-3xl mb-5 text-balance max-w-prose">
+          <h2 className="font-bold text-3xl mb-5 text-balance max-w-lg">
             Setting the Standard for Safe and Affordable Underwater Solutions
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">

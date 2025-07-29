@@ -30,7 +30,7 @@ export default function TestimonialSection() {
   return (
     <section
       ref={testSectionRef}
-      className="flex flex-col bg-black h-screen px-[22vw] justify-center items-center"
+      className="flex flex-col bg-black py-36 px-[22vw] justify-center items-center"
     >
       <div className="max-w-[75ch] mb-18">
         <h2 className="text-marine-100 font-bold font-secondary text-7xl text-center mb-5 text-balance">
