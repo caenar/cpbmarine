@@ -91,7 +91,14 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-black py-32 flex flex-col">
+    <section
+      ref={sectionRef}
+      className="py-32 flex flex-col"
+      style={{
+        background:
+          "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
+      }}
+    >
       <div className="px-[18vw]">
         <h2
           ref={titleRef}
@@ -116,8 +123,8 @@ export default function HistorySection() {
         />
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
-            "We started with equipment and passion — now we're shaping the
-            future of underwater services in the Philippines."
+            &quot;We started with equipment and passion — now we&apos;re shaping
+            the future of underwater services in the Philippines.&quot;
           </h3>
           <p className="font-bold">Conrado Paz</p>
           <p className="text-foreground-400">Founder, CBP Marine Solutions</p>

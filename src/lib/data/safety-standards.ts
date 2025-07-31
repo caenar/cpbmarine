@@ -1,7 +1,7 @@
 export const safetyStandards = [
   {
     title: "Certified and Authorized",
-    img: "/images/safety-standards/dti.jpg",
+    img: "/images/affiliations/1.jpg",
     description:
       "Trident CBP Marine Services is a fully registered and accredited contractor, authorized to operate under national and local government regulations.",
     items: [
@@ -13,7 +13,7 @@ export const safetyStandards = [
   },
   {
     title: "Surface-Supplied Diving Systems",
-    img: "/images/safety-standards/kirby.jpg",
+    img: "/images/resources/office/surface-supply-system.png",
     description:
       "All dive operations are conducted using surface-supplied air diving systems with full surface communication and visual monitoring.",
     items: [
@@ -24,7 +24,7 @@ export const safetyStandards = [
   },
   {
     title: "International Safety Standards",
-    img: "/images/safety-standards/acops.jpg",
+    img: "/images/resources/equipment/dive-gear.png",
     description:
       "Trident follows globally accepted commercial diving protocols to maintain safe and effective marine operations.",
     items: [
@@ -46,7 +46,7 @@ export const safetyStandards = [
   },
   {
     title: "Diver Training & Certification",
-    img: "/images/safety-standards/padi.jpg",
+    img: "/images/affiliations/4.jpg",
     description:
       "All divers are nationally and internationally certified, with a focus on ongoing safety training and physical readiness.",
     items: [

@@ -67,7 +67,7 @@ export default function StandardSafetySection() {
           },
           onUpdate: (self) => {
             const progress = self.progress ?? 0;
-            const height = 1 + progress * 340;
+            const height = 1 + progress * 350;
             gsap.set(img, {
               height,
               opacity: 1 + progress,
@@ -83,7 +83,7 @@ export default function StandardSafetySection() {
 
           onUpdate: (self) => {
             const progress = self.progress ?? 0;
-            const height = (1 - progress) * 340;
+            const height = (1 - progress) * 350;
             gsap.set(img, {
               height,
               opacity: 1 - progress,
@@ -114,7 +114,7 @@ export default function StandardSafetySection() {
       className="grid grid-cols-2 px-[20vw] py-32 bg-[rgba(3,_34,_66,_1)]"
       style={{
         background:
-          "linear-gradient(-180deg,rgba(0, 0, 0, 1) 0%, rgba(3, 34, 66, 1) 100%)",
+          "linear-gradient(0deg,rgba(3, 34, 66, 1) 0%, rgba(0, 0, 0, 1) 75%)",
       }}
     >
       <div ref={introRef} className="h-full">

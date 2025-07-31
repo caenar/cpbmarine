@@ -85,11 +85,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col items-start justify-center bg-marine-900 pt-36 pb-44"
-      style={{
-        background:
-          "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
-      }}
+      className="flex flex-col items-start justify-center bg-[rgba(3,_23,_46,_0)] pt-36 pb-44"
     >
       <div ref={introRef} className="px-[20vw]">
         <h2 className="font-secondary font-bold text-5xl text-balance mb-5">
@@ -109,7 +105,7 @@ export default function AboutSection() {
         <div>
           <Image
             className="rounded-lg w-full object-cover"
-            src="/images/vision.jpg"
+            src="/images/services/uw-cutting/cutting-1.png"
             alt="Mission image"
             width={450}
             height={450}
@@ -148,7 +144,7 @@ export default function AboutSection() {
         <div>
           <Image
             className="rounded-lg w-full object-cover"
-            src="/images/mission.jpg"
+            src="/images/services/port-maintenance/maintenance-1.JPG"
             alt="Mission image"
             width={450}
             height={450}

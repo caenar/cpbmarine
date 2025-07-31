@@ -22,6 +22,7 @@ const links = [
 ];
 
 export default function Nav() {
+  const [hasShadow, setHasShadow] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const activePath = usePathname();
@@ -31,12 +32,10 @@ export default function Nav() {
       const currentScroll = window.scrollY;
       const threshold = window.innerHeight * 0.3;
 
+      setHasShadow(currentScroll > 0);
+
       if (currentScroll > threshold) {
-        if (currentScroll > lastScrollY) {
-          setHideNav(true);
-        } else {
-          setHideNav(false);
-        }
+        setHideNav(currentScroll > lastScrollY);
       } else {
         setHideNav(false);
       }
@@ -53,6 +52,7 @@ export default function Nav() {
       className={cn(
         "z-50 fixed w-full flex justify-between items-center py-5 px-12 transition-all duration-500",
         hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100",
+        hasShadow && "bg-marine-950 backdrop-blur shadow-md",
       )}
     >
       <Image

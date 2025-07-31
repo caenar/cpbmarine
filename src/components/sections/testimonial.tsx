@@ -34,7 +34,6 @@ export default function TestimonialSection() {
           start: "80% 70%",
           end: "bottom 60%",
           scrub: true,
-          markers: true,
         },
       });
     }, testSectionRef);
@@ -45,11 +44,11 @@ export default function TestimonialSection() {
   return (
     <section
       ref={testSectionRef}
-      className="flex flex-col bg-black py-36 px-[22vw] justify-center items-center"
+      className="flex flex-col bg-[rgba(3,_34,_66,_1)] py-36 px-[22vw] justify-center items-center"
     >
       <div className="max-w-prose mb-18">
         <h2 className="text-marine-100 font-bold font-secondary text-7xl text-center mb-5 text-balance">
-          Companies we've worked with
+          Companies we&apos;ve worked with
         </h2>
         <p className="text-gray-300 text-center">
           These are just some of the organizations and institutions that have
