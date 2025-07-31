@@ -1,56 +1,56 @@
 export const timeline = [
   {
-    date: "January 2012",
-    title: "Humble Beginnings",
+    date: "2012",
+    title: "Adventure Bound Philippines Established",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ex maiores earum excepturi libero possimus iure laboriosam. Quisquam, pariatur error.",
+      "Started as a company focused on the importation and distribution of technical and recreational diving equipment — the foundation of what would become Trident CBP Marine Services.",
   },
   {
-    date: "June 2015",
-    title: "Expanded Operations",
+    date: "2014",
+    title: "Entry into Commercial Diving",
     description:
-      "Our team began expanding into regional contracts and deeper underwater infrastructure services.",
+      "Recognizing increasing demand for specialized services, the team transitioned into commercial diving operations under the name Trident Salvage and Trading.",
   },
   {
-    date: "September 2018",
-    title: "Accreditations Secured",
+    date: "2015",
+    title: "Landmark Salvage Project in Palawan",
     description:
-      "Trident CPB Marine Services secured major affiliations and safety certifications for offshore work.",
+      "Trident gained national attention after successfully completing one of the largest underwater salvage operations in the Philippines, located in Palawan.",
   },
   {
-    date: "March 2020",
-    title: "COVID-19 Response",
+    date: "2016",
+    title: "Company Restructuring",
     description:
-      "Implemented strict safety protocols and remote monitoring to ensure operational continuity during the pandemic.",
+      "After the major salvage project, the company was restructured into two entities: Conrado Paz Marine Services and Actuate Marine, both continuing operations to this day.",
   },
   {
-    date: "July 2021",
-    title: "Fleet Modernization",
+    date: "2017–2019",
+    title: "Expanding Capabilities",
     description:
-      "Upgraded diving equipment, support vessels, and safety systems to comply with international marine standards.",
+      "The two new companies broadened their scope, offering services such as underwater welding, pier maintenance, hull inspection, and marine construction support.",
   },
   {
-    date: "November 2022",
-    title: "International Partnerships",
+    date: "2020",
+    title: "Operational Continuity During COVID-19",
     description:
-      "Partnered with international marine engineering firms to expand our footprint in Southeast Asia.",
+      "Implemented strict health and safety protocols while maintaining key underwater operations, including port maintenance and inspection.",
+  },
+  {
+    date: "2021",
+    title: "Strengthened Industry Partnerships",
+    description:
+      "Worked with organizations like the Department of Tourism and the Philippine Ports Authority (PPA) to support marine infrastructure and tourism development.",
+  },
+  {
+    date: "2023",
+    title: "Training and Certifications",
+    description:
+      "Over 300 divers trained and certified through the PADI instruction program, reinforcing the company's dedication to quality education and safety.",
   },
   {
     date: "2024",
-    title: "Moving Forward",
+    title: "Sustainability Initiatives",
     description:
-      "We now look ahead to new technologies and solutions in commercial diving and marine logistics.",
-  },
-  {
-    date: "May 2025",
-    title: "Green Marine Initiatives",
-    description:
-      "Launched sustainability programs focused on reef-safe procedures and carbon-neutral marine operations.",
-  },
-  {
-    date: "2026",
-    title: "AI-Driven Inspections",
-    description:
-      "Adopted AI-assisted underwater inspection tools to improve efficiency and safety for long-duration projects.",
+      "Launched marine-friendly protocols and reef-safe procedures as part of Trident’s commitment to responsible underwater operations.",
   },
 ];

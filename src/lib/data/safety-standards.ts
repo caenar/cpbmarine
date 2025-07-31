@@ -1,46 +1,58 @@
 export const safetyStandards = [
   {
-    title: "DOLE OSH Standards",
-    img: "/images/safety-standards/1.jpg",
+    title: "Certified and Authorized",
+    img: "/images/safety-standards/dti.jpg",
     description:
-      "Compliant with the Department of Labor and Employment’s Occupational Safety and Health (OSH) Standards.",
+      "Trident CBP Marine Services is a fully registered and accredited contractor, authorized to operate under national and local government regulations.",
     items: [
-      "Personnel trained in BOSH and COSH",
-      "Proper safety signages and protocols on site",
-      "All workers equipped with certified PPEs",
+      "DTI Registered – Department of Trade and Industry",
+      "Legazpi City Mayor’s Permit – Marine services on-call",
+      "PhilGEPS Registered – Eligible for government marine projects",
+      "PCAB Accredited – Through Actuate Builders (Category A Contractor)",
     ],
   },
   {
-    title: "IMCA Guidelines",
-    img: "/images/safety-standards/2.jpg",
+    title: "Surface-Supplied Diving Systems",
+    img: "/images/safety-standards/kirby.jpg",
     description:
-      "Following International Marine Contractors Association (IMCA) standards for commercial diving.",
+      "All dive operations are conducted using surface-supplied air diving systems with full surface communication and visual monitoring.",
     items: [
-      "Compliance with D 014 (Code of Practice for Offshore Diving)",
-      "Medical standards based on IMCA D 020",
-      "Use of certified diving equipment and support systems",
+      "Kirby Morgan band masks with CCTV and two-way comms",
+      "Surface-supplied air ensures safety and supervision",
+      "Real-time diver monitoring from surface crew",
     ],
   },
   {
-    title: "Philippine Coast Guard Compliance",
-    img: "/images/safety-standards/3.png",
+    title: "International Safety Standards",
+    img: "/images/safety-standards/acops.jpg",
     description:
-      "All marine operations meet PCG protocols and safety mandates.",
+      "Trident follows globally accepted commercial diving protocols to maintain safe and effective marine operations.",
     items: [
-      "Permit acquisition and route approvals",
-      "Compliance with vessel safety standards",
-      "Emergency drills supervised by PCG when required",
+      "Diving procedures follow Accepted Code of Practice Standards (ACOPS)",
+      "Medical compliance aligned with IMCA D 020",
+      "Use of certified and regularly maintained dive gear",
     ],
   },
   {
-    title: "Diver Certification & Training",
-    img: "/images/safety-standards/4.jpg",
+    title: "Advanced Survey & Inspection Protocols",
+    img: "/images/safety-standards/survey.jpg",
     description:
-      "Divers meet national and international standards of competency and health.",
+      "We deploy advanced monitoring tools and techniques for detailed structural assessment and project planning.",
     items: [
-      "Certified by institutions like IDSA, IMCA, or Philippine Navy Diving School",
-      "Regular refresher courses and underwater rescue training",
-      "Annual physical and hyperbaric medical evaluations",
+      "Site-specific surveys with modern marine technology",
+      "Data analysis in coordination with expert surveyors",
+      "Inspection reporting that supports engineering-grade decisions",
+    ],
+  },
+  {
+    title: "Diver Training & Certification",
+    img: "/images/safety-standards/padi.jpg",
+    description:
+      "All divers are nationally and internationally certified, with a focus on ongoing safety training and physical readiness.",
+    items: [
+      "Certified by PADI, IMCA, IDSA, or Philippine Navy Diving School",
+      "Regular underwater rescue and refresher training",
+      "Annual physical and hyperbaric evaluations required",
     ],
   },
 ];

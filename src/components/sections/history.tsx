@@ -91,10 +91,7 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="bg-[rgba(3,_34,_66,_1)] py-32 flex flex-col"
-    >
+    <section ref={sectionRef} className="bg-black py-32 flex flex-col">
       <div className="px-[18vw]">
         <h2
           ref={titleRef}
@@ -119,19 +116,15 @@ export default function HistorySection() {
         />
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
-            &quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Officia quo laboriosam voluptatem veritatis voluptates
-            aspernatur&quot;
+            "We started with equipment and passion — now we're shaping the
+            future of underwater services in the Philippines."
           </h3>
-          <p className="font-bold">Conrad Paz</p>
+          <p className="font-bold">Conrado Paz</p>
           <p className="text-foreground-400">Founder, CBP Marine Solutions</p>
         </div>
       </div>
 
-      <div
-        ref={timelineSectionRef}
-        className="relative flex flex-col gap-20 bg-[rgba(3,_34,_66,_1)]"
-      >
+      <div ref={timelineSectionRef} className="relative flex flex-col gap-20 ">
         {/* vertical line */}
         <div
           ref={timelineLineRef}

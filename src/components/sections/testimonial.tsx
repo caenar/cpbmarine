@@ -1,4 +1,4 @@
-import { testimonials } from "@/lib/data/testimonials";
+import { testimonials as clients } from "@/lib/data/testimonials";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,6 +22,21 @@ export default function TestimonialSection() {
           scrub: true,
         },
       });
+
+      const listItems = testSectionRef.current!.querySelectorAll("ul li");
+      gsap.from(listItems, {
+        opacity: 0,
+        y: 50,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: testSectionRef.current,
+          start: "80% 70%",
+          end: "bottom 60%",
+          scrub: true,
+          markers: true,
+        },
+      });
     }, testSectionRef);
 
     return () => ctx.revert();
@@ -32,56 +47,25 @@ export default function TestimonialSection() {
       ref={testSectionRef}
       className="flex flex-col bg-black py-36 px-[22vw] justify-center items-center"
     >
-      <div className="max-w-[75ch] mb-18">
+      <div className="max-w-prose mb-18">
         <h2 className="text-marine-100 font-bold font-secondary text-7xl text-center mb-5 text-balance">
-          What they say about us
+          Companies we've worked with
         </h2>
         <p className="text-gray-300 text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe eius
-          provident, officia laudantium similique consequuntur itaque
-          accusantium nemo fugit.
+          These are just some of the organizations and institutions that have
+          trusted Trident CBP Marine Services through the years.
         </p>
       </div>
-
-      <div className="grid grid-rows-2 gap-6">
-        {[0, 1].map((row) => {
-          const rowTestimonials = testimonials.filter((_, i) => i % 2 === row);
-
-          return (
-            <div key={`${row}`} className="relative w-[65vw] overflow-hidden">
-              <div className="pointer-events-none absolute left-0 top-0 h-full w-50 bg-gradient-to-r from-black to-transparent z-10" />
-              <div className="pointer-events-none absolute right-0 top-0 h-full w-50 bg-gradient-to-l from-black to-transparent z-10" />
-
-              <div
-                className={`
-          flex gap-6 w-max animate-marquee-left
-          ${row === 1 ? "animate-delay-15s" : ""}
-        `}
-              >
-                {[...rowTestimonials, ...rowTestimonials].map((t, idx) => (
-                  <div
-                    key={`${row}-${idx}`}
-                    className="flex flex-col justify-between border border-black-800 bg-black-950 w-sm h-[180px] rounded-lg p-5 min-w-[300px]"
-                  >
-                    <h3 className="text-md leading-snug text-balance">
-                      {t.quote}
-                    </h3>
-                    <div className="flex justify-between items-center mt-4">
-                      <div>
-                        <h4 className="font-medium text-sm">{t.name}</h4>
-                        <p className="text-gray-400 text-sm">{t.position}</p>
-                      </div>
-                      <div className="flex justify-center items-center rounded-full h-10 w-10 bg-marine-500">
-                        <span className="text-sm">{t.initials}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-white text-lg font-medium">
+        {clients.map((c, i) => (
+          <li
+            key={i}
+            className="bg-marine-900 p-4 text-balance font-secondary font-semibold text-xl rounded-lg border border-marine-700"
+          >
+            {c.name}
+          </li>
+        ))}
+      </ul>{" "}
     </section>
   );
 }

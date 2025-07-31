@@ -59,7 +59,7 @@ export default function CtaSection() {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col justify-center items-center py-52 px-[18vw] text-foreground-100 text-center"
+      className="flex flex-col justify-center items-center py-32 px-[18vw] text-foreground-100 text-center"
       style={{
         background:
           "linear-gradient(0deg,rgba(1, 13, 26, 1) 0%, rgba(3, 34, 66, 1) 100%)",
@@ -75,9 +75,9 @@ export default function CtaSection() {
         ref={paragraphRef}
         className="text-foreground-600 text-lg mb-10 max-w-2xl mx-auto"
       >
-        Whether it&apos;s underwater inspection, marine repairs, or subsea engineering —
-        our team is equipped and ready to dive into your needs. Let&apos;s make waves
-        together.
+        Whether it&apos;s underwater inspection, marine repairs, or subsea
+        engineering — our team is equipped and ready to dive into your needs.
+        Let&apos;s make waves together.
       </p>
 
       <Link

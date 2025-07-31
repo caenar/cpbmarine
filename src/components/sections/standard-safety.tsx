@@ -111,7 +111,7 @@ export default function StandardSafetySection() {
   return (
     <section
       ref={sectionRef}
-      className="grid grid-cols-2 px-[20vw] py-32"
+      className="grid grid-cols-2 px-[20vw] py-32 bg-[rgba(3,_34,_66,_1)]"
       style={{
         background:
           "linear-gradient(-180deg,rgba(0, 0, 0, 1) 0%, rgba(3, 34, 66, 1) 100%)",
@@ -122,8 +122,9 @@ export default function StandardSafetySection() {
           Safety Standards
         </h2>
         <p className="text-foreground-600 leading-relaxed text-balance max-w-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-          voluptatem quaerat
+          We follow recognized safety standards, use certified equipment, and
+          deploy only qualified personnel — because safe operations are the
+          foundation of successful marine work.
         </p>
       </div>
 
