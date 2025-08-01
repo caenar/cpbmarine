@@ -22,7 +22,6 @@ const links = [
 ];
 
 export default function Nav() {
-  const [hasShadow, setHasShadow] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const activePath = usePathname();
@@ -31,8 +30,6 @@ export default function Nav() {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
       const threshold = window.innerHeight * 0.3;
-
-      setHasShadow(currentScroll > 0);
 
       if (currentScroll > threshold) {
         setHideNav(currentScroll > lastScrollY);
@@ -52,7 +49,6 @@ export default function Nav() {
       className={cn(
         "z-50 fixed w-full flex justify-between items-center py-5 px-12 transition-all duration-500",
         hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100",
-        hasShadow && "bg-marine-950 backdrop-blur shadow-md",
       )}
     >
       <Image
@@ -69,18 +65,31 @@ export default function Nav() {
 
             return li.submenu ? (
               <li
-                className="relative group hover:text-gray-400 transition-colors"
                 key={li.label}
+                className={cn(
+                  "relative group transition-colors",
+                  isActive
+                    ? "text-gold-500 hover:text-gold-500 font-black"
+                    : activePath === "/"
+                      ? "hover:text-gray-500"
+                      : "text-marine-700 hover:text-marine-500",
+                )}
               >
                 <span className="flex gap-1 items-center cursor-pointer">
                   {li.label} <ChevronDown className="size-4.5" />
                 </span>
-                <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                <ul
+                  className={cn(
+                    "absolute left-0 mt-2 w-40 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 bg-white",
+                  )}
+                >
                   {li.submenu.map((sublink) => (
                     <li key={sublink.href}>
                       <Link
                         href={sublink.href}
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
+                        className={cn(
+                          "block px-4 py-2 text-marine-700 hover:bg-gray-200",
+                        )}
                       >
                         {sublink.label}
                       </Link>
@@ -91,8 +100,12 @@ export default function Nav() {
             ) : (
               <Link
                 className={cn(
-                  !isActive && "hover:text-gray-400 transition-colors",
-                  isActive && "text-gold-500 font-black",
+                  "transition-colors",
+                  isActive
+                    ? "text-gold-500 hover:text-gold-500 font-black"
+                    : activePath === "/"
+                      ? "hover:text-gray-600"
+                      : "text-marine-700 hover:text-marine-500",
                 )}
                 key={`${li}-${idx}`}
                 href={li.href}

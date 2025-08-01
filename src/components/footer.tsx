@@ -13,10 +13,8 @@ export default function Footer() {
             height={60}
             className="mb-5"
           />
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam corporis
-            rerum dolorum libero quis explicabo sapiente voluptatem enim, harum fugiat!
-          </p>
+          <p className="font-bold">DTI Registered. PhilGEPS Registered.</p>
+          <p>Certified marine services, above and below expectations.</p>
         </div>
 
         <div className="flex gap-32 flex-wrap">
@@ -79,16 +77,16 @@ export default function Footer() {
 
         <div>
           <h4 className="font-bold text-foreground-100 mb-3">Contact</h4>
-          <p className="mb-2">Freeport Zone, Philippines</p>
-          <p className="mb-2">help@cbpmarine.ph</p>
-          <p>+63 912 345 6789</p>
+          <p className="mb-2">862 B4 Barriada, Legazpi City</p>
+          <p className="mb-2">diverconz@gmail.com</p>
+          <p>+63 917 8707 337</p>
         </div>
       </div>
 
       <div className="border-t border-marine-800 pt-6 text-sm text-center">
         <p>
-          &copy; {new Date().getFullYear()} Trident CPB Marine Services. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Trident CPB Marine Services. All
+          rights reserved.
         </p>
       </div>
     </footer>
