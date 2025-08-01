@@ -31,9 +31,9 @@ const facilities = [
 
 export default function FacilitiesPage() {
   return (
-    <main className="bg-white px-[18vw] py-24 text-black">
-      <section className="mb-16">
-        <h1 className="text-6xl font-bold font-secondary text-marine-900 mb-4">
+    <main>
+      <section className="px-[20vw] pt-36 pb-20 bg-marine-900 text-white">
+        <h1 className="text-6xl font-bold font-secondary mb-4">
           Our Facilities
         </h1>
         <p className="text-lg text-foreground-600 max-w-prose leading-relaxed">
@@ -42,24 +42,26 @@ export default function FacilitiesPage() {
           deployment.
         </p>
       </section>
-
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-14">
-        {facilities.map((facility, i) => (
-          <div key={i} className="flex flex-col gap-4">
-            <div className="relative h-[240px] rounded-lg overflow-hidden">
-              <Image
-                src={facility.img}
-                alt={facility.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <h3 className="text-2xl font-semibold text-marine-900">
-              {facility.name}
-            </h3>
-            <p className="text-foreground-600">{facility.description}</p>
-          </div>
-        ))}
+      <section className="px-[20vw] bg-marine-100 text-marine-950 grid grid-cols-2 py-28">
+        <div>
+          <h3 className="w-sm font-bold font-secondary text-2xl">
+            Main Office
+          </h3>
+          <p className="text-marine-400">862 B4 Barriada, Legazpi City</p>
+        </div>
+        <div className="text-marine-800">
+          <p className="w-sm mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
+            aliquid pariatur eius, ipsam consectetur optio aspernatur incidunt
+            maxime exercitationem atque adipisci voluptatibus sequi doloremque
+            consequatur voluptatum, quidem velit inventore a!
+          </p>
+          <p className="w-sm">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quasi
+            doloribus adipisci rem aliquid omnis nulla tempore labore voluptas
+            dolorem.
+          </p>
+        </div>
       </section>
     </main>
   );
