@@ -1,5 +1,6 @@
 "use client";
 
+import Carousel from "@/components/carousel";
 import Image from "next/image";
 
 const facilities = [
@@ -42,14 +43,39 @@ export default function FacilitiesPage() {
           deployment.
         </p>
       </section>
-      <section className="px-[20vw] bg-marine-100 text-marine-950 grid grid-cols-2 py-28">
+
+      <section className="px-[20vw] bg-marine-100 text-marine-950 grid grid-cols-2 py-24">
+        <div className="flex flex-col gap-7">
+          <div>
+            <h3 className="w-sm font-bold font-secondary text-2xl">
+              Training Facility
+            </h3>
+            <p className="text-marine-400">Barangay Sula Bacacay, Albay</p>
+          </div>
+          <div className="text-marine-800">
+            <p className="w-sm mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
+              aliquid pariatur eius, ipsam consectetur optio aspernatur incidunt
+              maxime exercitationem atque adipisci voluptatibus sequi doloremque
+              consequatur voluptatum, quidem velit inventore a!
+            </p>
+            <p className="w-sm">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+              quasi doloribus adipisci rem aliquid omnis nulla tempore labore
+              voluptas dolorem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-[20vw] bg-marine-900 text-marine-100 grid grid-cols-2 py-24">
         <div>
           <h3 className="w-sm font-bold font-secondary text-2xl">
             Main Office
           </h3>
           <p className="text-marine-400">862 B4 Barriada, Legazpi City</p>
         </div>
-        <div className="text-marine-800">
+        <div className="text-marine-300">
           <p className="w-sm mb-5">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
             aliquid pariatur eius, ipsam consectetur optio aspernatur incidunt
@@ -61,6 +87,34 @@ export default function FacilitiesPage() {
             doloribus adipisci rem aliquid omnis nulla tempore labore voluptas
             dolorem.
           </p>
+        </div>
+      </section>
+      <Carousel />
+
+      <section className="px-[20vw] bg-marine-100 text-marine-950 grid grid-cols-2 py-24">
+        <div></div>
+        <div className="flex flex-col gap-7">
+          <div>
+            <h3 className="w-sm font-bold font-secondary text-2xl">
+              Warehouse / Yard
+            </h3>
+            <p className="text-marine-400">
+              48 Diamond St. Imperial Court, Legazpi City
+            </p>
+          </div>
+          <div className="text-marine-800">
+            <p className="w-sm mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
+              aliquid pariatur eius, ipsam consectetur optio aspernatur incidunt
+              maxime exercitationem atque adipisci voluptatibus sequi doloremque
+              consequatur voluptatum, quidem velit inventore a!
+            </p>
+            <p className="w-sm">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+              quasi doloribus adipisci rem aliquid omnis nulla tempore labore
+              voluptas dolorem.
+            </p>
+          </div>
         </div>
       </section>
     </main>
