@@ -2,9 +2,9 @@
 
 export default function FutureProspectsPage() {
   return (
-    <main className="bg-white px-[18vw] py-24 text-black">
-      <section className="mb-16">
-        <h1 className="text-6xl font-bold font-secondary text-marine-900 mb-4">
+    <main>
+      <section className="px-[20vw] pt-32 pb-28">
+        <h1 className="text-6xl font-bold font-secondary mb-4">
           Looking Ahead
         </h1>
         <p className="text-lg text-foreground-600 max-w-prose leading-relaxed">
@@ -14,7 +14,7 @@ export default function FutureProspectsPage() {
         </p>
       </section>
 
-      <section className="space-y-16">
+      <section className="px-[10vw] pt-32 pb-62 bg-marine-100">
         <div>
           <h2 className="text-3xl font-bold text-marine-800 mb-3">
             Sustainability in Marine Operations

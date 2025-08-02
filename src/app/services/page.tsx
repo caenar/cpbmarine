@@ -1,12 +1,13 @@
 "use client";
 
+import { services } from "@/lib/data/services";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white text-black">
+    <main>
       <section className="relative h-[70vh] flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
@@ -36,12 +37,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="pt-22 py-38">
+      <section className="bg-marine-100 pt-22 py-38">
         <div className="px-[20vw] mb-20">
           <h1 className="text-6xl font-bold font-secondary text-marine-900 mb-4">
             Our Services
           </h1>
-          <p className="text-lg text-foreground-600 max-w-prose leading-relaxed">
+          <p className="text-lg text-foreground-700 max-w-prose leading-relaxed">
             Trident CBP Marine Services offers a wide range of underwater and
             marine solutions, designed to meet the demands of both public and
             private marine infrastructure projects across the Philippines.
@@ -49,38 +50,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="px-[10vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {[
-            {
-              title: "Underwater Inspection & Survey",
-              desc: "Comprehensive structural integrity checks using advanced imaging and monitoring equipment.",
-              img: "/images/services/inspection.jpg",
-            },
-            {
-              title: "Surface-Supplied Air Diving",
-              desc: "Safe, surface-monitored diving using Kirby Morgan band masks, CCTV, and two-way comms.",
-              img: "/images/services/surface-supplied.jpg",
-            },
-            {
-              title: "Marine Salvage & Recovery",
-              desc: "Refloating sunken equipment, barge retrieval, and shipwreck handling with expert teams.",
-              img: "/images/services/salvage.jpg",
-            },
-            {
-              title: "Pier Maintenance & Construction",
-              desc: "Support for marine infrastructure projects through underwater welding, drilling, and repairs.",
-              img: "/images/services/pier.jpg",
-            },
-            {
-              title: "Environmental Marine Surveys",
-              desc: "Partnering with LGUs and agencies to assess reef health, water quality, and marine park feasibility.",
-              img: "/images/services/environment.jpg",
-            },
-            {
-              title: "Diving Equipment Rental",
-              desc: "Available through Adventure Bound Philippines. Technical and recreational diving gear rentals.",
-              img: "/images/services/rental.jpg",
-            },
-          ].map((service, i) => (
+          {services.map((service, i) => (
             <div key={i} className="flex flex-col overflow-hidden bg-marine-50">
               <div className="h-[500px] w-full bg-gray-300">
                 <img
@@ -91,8 +61,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="py-5 flex flex-col">
-                {/* Number */}
-                <span className="text-gold-600 font-bold mb-1">
+                <span className="text-gold-700 font-bold mb-1">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
@@ -100,13 +69,13 @@ export default function ServicesPage() {
                   {service.title}
                 </h3>
 
-                <p className="text-foreground-600 mb-4 leading-relaxed flex-grow">
+                <p className="text-foreground-700 mb-4 leading-relaxed flex-grow">
                   {service.desc}
                 </p>
 
-                <div className="border-t border-marine-100 my-4" />
+                <div className="border-t border-marine-200 my-4" />
 
-                <button className="font-bold text-marine-950 hover:underline self-start flex items-center gap-2">
+                <button className="font-bold text-marine-950 hover:underline self-start flex items-center gap-2 cursor-pointer">
                   Learn more <ArrowRight className="text-marine-400 size-4" />
                 </button>
               </div>

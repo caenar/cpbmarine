@@ -1,45 +1,14 @@
 "use client";
 
+import { equipment } from "@/lib/data/equipment";
 import Image from "next/image";
-
-const equipment = [
-  {
-    name: "Surface-Supplied Air Systems",
-    description:
-      "We use surface-supplied diving systems with Kirby Morgan band masks, providing divers with two-way communication, CCTV monitoring, and real-time supervision.",
-    img: "/images/equipment/surface-supplied.jpg",
-  },
-  {
-    name: "Halcyon Evolve & Explorer Systems",
-    description:
-      "Advanced recreational and technical dive gear for deep, complex underwater missions. Reliable and fully maintained.",
-    img: "/images/equipment/halcyon.jpg",
-  },
-  {
-    name: "Digital Inspection Tools",
-    description:
-      "Our team uses underwater cameras, sonar, and remotely monitored systems to capture accurate data and structural imagery.",
-    img: "/images/equipment/inspection.jpg",
-  },
-  {
-    name: "Dive Communications & CCTV",
-    description:
-      "All dive helmets are integrated with surface communications and live video feeds, enabling safety teams to monitor divers closely.",
-    img: "/images/equipment/cctv-comms.jpg",
-  },
-  {
-    name: "Compressor & Gas Management",
-    description:
-      "We maintain certified compressors and backup tanks, regularly tested and logged for safe underwater breathing operations.",
-    img: "/images/equipment/compressors.jpg",
-  },
-];
+import React from "react";
 
 export default function EquipmentPage() {
   return (
-    <main className="bg-white px-[18vw] py-24 text-black">
-      <section className="mb-16">
-        <h1 className="text-6xl font-bold font-secondary text-marine-900 mb-4">
+    <main>
+      <section className="px-[20vw] pt-32 pb-28 text-white-100">
+        <h1 className="text-6xl font-bold font-secondary mb-4">
           Equipment & Technology
         </h1>
         <p className="text-lg text-foreground-600 max-w-prose leading-relaxed">
@@ -49,9 +18,9 @@ export default function EquipmentPage() {
         </p>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-14">
+      <section className="px-[10vw] pt-32 pb-62 bg-marine-100 grid grid-cols-3 gap-15">
         {equipment.map((item, i) => (
-          <div key={i} className="flex flex-col gap-4">
+          <div>
             <div className="relative h-[240px] rounded-lg overflow-hidden">
               <Image
                 src={item.img}
