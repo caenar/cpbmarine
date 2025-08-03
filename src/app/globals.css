@@ -157,3 +157,8 @@ main {
   clip-path: inset(0 0 0 0);
   transition: clip-path 0.3s ease-out;
 }
+
+input,
+textarea {
+  @apply border-b border-foreground-600 text-marine-900 py-3 w-full resize-none outline-none;
+}

@@ -17,96 +17,45 @@ export default function ContactPage() {
   }
 
   return (
-    <main>
-      <h1 className="text-5xl font-secondary font-bold mb-10 text-center">
-        Get in Touch
-      </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
-        <div className="space-y-8">
-          <div>
-            <h2 className="text-xl font-bold text-gold-400 mb-1">
-              Head Office
-            </h2>
-            <p className="text-foreground-400">
-              Placeholder Address, Legazpi City, Philippines
+    <main className="grid grid-cols-[40%_1fr] min-h-screen">
+      <div className="flex bg-marine-100 w-full h-full items-center justify-center">
+        <form
+          onSubmit={handleSubmit}
+          className="grid gap-10 w-lg text-marine-900"
+        >
+          <div className="mb-2">
+            <h1 className="font-secondary text-5xl font-bold mb-5">
+              Let's work together
+            </h1>
+            <p className="text-foreground-800 text-balance">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos, saepe?
             </p>
           </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-gold-400 mb-1">
-              Metro Manila Office
-            </h2>
-            <p className="text-foreground-400">
-              Placeholder Address, Taguig City
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-gold-400 mb-1">
-              Southern Luzon Office
-            </h2>
-            <p className="text-foreground-400">
-              Placeholder Address, Batangas City
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-gold-400 mb-1">Email</h2>
-            <p className="text-foreground-400">info@tridentcbpmarine.com</p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-gold-400 mb-1">Phone</h2>
-            <p className="text-foreground-400">+63 912 345 6789</p>
-          </div>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label className="block mb-1 font-bold text-white">Name</label>
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <div className="flex items-center">
+            <span className="font-bold bg-marine-900 text-foreground-100 flex items-center justify-center w-[50px] h-full">
+              +63
+            </span>
             <input
+              className="pl-3"
               type="text"
-              name="name"
-              onChange={handleChange}
-              className="w-full px-4 py-2 rounded bg-black border border-gray-700 focus:outline-none focus:border-gold-500"
-              placeholder="Your Name"
-              required
+              name="phone"
+              placeholder="917 8707 337"
             />
           </div>
-
-          <div>
-            <label className="block mb-1 font-bold text-white">Email</label>
-            <input
-              type="email"
-              name="email"
-              onChange={handleChange}
-              className="w-full px-4 py-2 rounded bg-black border border-gray-700 focus:outline-none focus:border-gold-500"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 font-bold text-white">Message</label>
-            <textarea
-              name="message"
-              onChange={handleChange}
-              rows={5}
-              className="w-full px-4 py-2 rounded bg-black border border-gray-700 focus:outline-none focus:border-gold-500"
-              placeholder="How can we help you?"
-              required
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="bg-gold-500 hover:bg-gold-400 text-black font-bold px-6 py-3 rounded transition-colors"
-          >
-            Send Message
+          <textarea
+            name="message"
+            placeholder="What can we do for you?"
+            rows={5}
+          ></textarea>
+          <button className="cursor-pointer bg-marine-900 text-marine-100 font-bold w-full h-12">
+            Get started
           </button>
         </form>
       </div>
+      <div className="bg-cover bg-[url('/images/services/uw-cutting/2.png')] bg-marine-300 bg-blend-multiply"></div>
     </main>
   );
 }
