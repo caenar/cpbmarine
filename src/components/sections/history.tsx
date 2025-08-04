@@ -115,8 +115,8 @@ export default function HistorySection() {
         className="flex items-center gap-10 px-[18vw] mb-32"
       >
         <Image
-          className="rounded-lg h-[300px] w-[500px] object-cover"
-          src="/images/founder.jpg"
+          className="rounded-lg h-[400px] w-[600px] object-cover"
+          src="/images/team/divers.JPG"
           alt="Mission image"
           width={2000}
           height={2000}

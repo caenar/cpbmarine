@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,27 +32,24 @@ export default function HeaderSection() {
           duration: 1,
           ease: "power2.out",
         },
-        "<+0.5",
+        "<+0.5"
       );
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
-
   return (
-    <>
+    <React.Fragment>
       <header
         ref={headerRef}
-        className="relative flex justify-center min-h-screen"
+        className="relative overflow-hidden flex justify-center min-h-screen"
       >
-        <div className="grid p-12 grid-cols-4 grid-rows-5 items-center w-full font-secondary">
-          <span className="row-start-2 col-start-2 text-right justify-self-start uppercase font-bold text-5xl leading-[1]">
-            Golden <br />
-            Trident <br /> Salvage
-          </span>
-          <span className="justify row-start-4 col-start-3 justify-self-end uppercase font-bold text-5xl leading-[1]">
-            Conrado <br /> Paz Marine <br /> Services
-          </span>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#03172ec5] via-transparent to-[#03172e] pointer-events-none z-2" />
+
+        <div className="absolute min-h-screen w-full bg-[url('/images/services/welding/diver.png')] bg-cover bg-right bg-no-repeat"></div>
+
+        <div className="absolute bottom-0 left-0 w-full h-full z-20 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-[#01142e] to-transparent" />
         </div>
       </header>
 
@@ -66,6 +64,6 @@ export default function HeaderSection() {
           />
         </div>
       </section>
-    </>
+    </React.Fragment>
   );
 }

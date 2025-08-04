@@ -92,23 +92,22 @@ export default function AboutSection() {
           Trusted Underwater Solutions Since 2012
         </h2>
         <p className="text-foreground-600 text-lg max-w-prose">
-          Trident CBP Marine Service delivers expert underwater services — from
-          salvage and welding to scientific surveys — with a commitment to
-          quality, affordability, and safety. Proudly serving industries
-          nationwide since 2012.
+          Trident CBP Marine Service delivers expert underwater services — from salvage
+          and welding to scientific surveys — with a commitment to quality, affordability,
+          and safety. Proudly serving industries nationwide since 2012.
         </p>
       </div>
 
       <div ref={divider1Ref} className="w-0 h-px bg-marine-700 my-12" />
 
-      <div ref={missionRef} className="flex gap-7 px-[20vw]">
+      <div ref={missionRef} className="grid grid-cols-2 gap-15 px-[20vw]">
         <div>
           <Image
-            className="rounded-lg w-full object-cover"
-            src="/images/services/uw-cutting/cutting-1.png"
+            className="rounded-lg object-cover w-[550px] h-[400px]"
+            src="/images/services/uw-cutting/1.png"
             alt="Mission image"
-            width={450}
-            height={450}
+            width={400}
+            height={400}
           />
         </div>
         <div>
@@ -117,37 +116,37 @@ export default function AboutSection() {
             Affordable and Reliable Marine Expertise, Delivered Safely
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            At Trident CBP Marine Service, our mission is to deliver
-            high-quality underwater services that are accessible and
-            cost-effective, without compromising safety. Since 2012, we&apos;ve
-            supported marine operations through expert salvage, maintenance,
-            construction, and training — always guided by professionalism,
-            innovation, and a deep respect for the marine environment.
+            At Trident CBP Marine Service, our mission is to deliver high-quality
+            underwater services that are accessible and cost-effective, without
+            compromising safety. Since 2012, we&apos;ve supported marine operations
+            through expert salvage, maintenance, construction, and training — always
+            guided by professionalism, innovation, and a deep respect for the marine
+            environment.
           </p>
         </div>
       </div>
 
       <div ref={divider2Ref} className="w-0 h-px bg-marine-700 my-12" />
 
-      <div ref={visionRef} className="flex gap-7 px-[20vw]">
+      <div ref={visionRef} className="grid grid-cols-2 gap-15 px-[20vw]">
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
           <h2 className="font-bold text-3xl mb-5 text-balance max-w-lg">
             Setting the Standard for Safe and Affordable Underwater Solutions
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            To be the Philippines’ leading partner in reliable, affordable, and
-            safe underwater solutions — trusted by industries and institutions
-            for our commitment to service excellence and operational integrity.
+            To be the Philippines’ leading partner in reliable, affordable, and safe
+            underwater solutions — trusted by industries and institutions for our
+            commitment to service excellence and operational integrity.
           </p>
         </div>
         <div>
           <Image
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg h-[400px] w-[550px] object-cover"
             src="/images/services/port-maintenance/maintenance-1.JPG"
             alt="Mission image"
-            width={450}
-            height={450}
+            width={400}
+            height={400}
           />
         </div>
       </div>
