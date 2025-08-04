@@ -44,7 +44,7 @@ export default function FacilitiesPage() {
         </p>
       </section>
 
-      <section className="px-[20vw] bg-marine-100 text-marine-950 grid grid-cols-[40%_1fr] items-center gap-15 pt-32 pb-62">
+      <section className="px-[20vw] bg-foreground-100 text-marine-950 grid grid-cols-[40%_1fr] items-center gap-15 pt-32 pb-62">
         <div className="flex flex-col gap-7">
           <div>
             <h3 className="w-sm font-bold font-secondary text-2xl">
@@ -100,7 +100,7 @@ export default function FacilitiesPage() {
       </section>
       <Carousel />
 
-      <section className="px-[20vw] bg-marine-100 text-marine-950 grid grid-cols-[1fr_40%] gap-15 items-center pt-32 pb-62">
+      <section className="px-[20vw] bg-foreground-100 text-marine-950 grid grid-cols-[1fr_40%] gap-15 items-center pt-32 pb-62">
         <div>
           <Image
             src="/images/resources/equipment/1.PNG"

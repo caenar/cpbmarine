@@ -18,7 +18,7 @@ export default function ContactPage() {
 
   return (
     <main className="grid grid-cols-[40%_1fr] min-h-screen">
-      <div className="flex bg-marine-100 w-full h-full items-center justify-center">
+      <div className="flex bg-foreground-100 w-full h-full items-center justify-center">
         <form
           onSubmit={handleSubmit}
           className="grid gap-10 w-lg text-marine-900"

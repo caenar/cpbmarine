@@ -18,21 +18,24 @@ export default function EquipmentPage() {
         </p>
       </section>
 
-      <section className="px-[10vw] pt-32 pb-62 bg-marine-100 grid grid-cols-3 gap-15">
+      <section className="px-[10vw] pt-32 pb-62 bg-foreground-100 grid grid-cols-2 gap-20">
         {equipment.map((item, i) => (
-          <div>
-            <div className="relative h-[240px] rounded-lg overflow-hidden">
+          <div key={i} className="grid grid-cols-2 gap-5 items-center">
+            <div className="h-[240px] overflow-hidden mb-3">
               <Image
                 src={item.img}
                 alt={item.name}
-                fill
-                className="object-cover"
+                width={1500}
+                height={1500}
+                className="object-cover w-full h-full"
               />
             </div>
-            <h3 className="text-2xl font-semibold text-marine-900">
-              {item.name}
-            </h3>
-            <p className="text-foreground-600">{item.description}</p>
+            <div>
+              <h3 className="text-2xl font-semibold text-marine-900">
+                {item.name}
+              </h3>
+              <p className="text-foreground-600">{item.description}</p>
+            </div>
           </div>
         ))}
       </section>

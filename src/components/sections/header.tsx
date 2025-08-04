@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +31,7 @@ export default function HeaderSection() {
           duration: 1,
           ease: "power2.out",
         },
-        "<+0.5"
+        "<+0.5",
       );
     }, containerRef);
 

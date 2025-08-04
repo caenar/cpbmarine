@@ -37,7 +37,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-marine-100 pt-22 py-38">
+      <section className="bg-foreground-100 pt-22 py-38">
         <div className="px-[20vw] mb-20">
           <h1 className="text-6xl font-bold font-secondary text-marine-900 mb-4">
             Our Services
