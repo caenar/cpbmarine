@@ -109,7 +109,7 @@ export default function HistorySection() {
       </div>
 
       <div ref={dividerRef} className="w-0 h-px bg-marine-700 my-12"></div>
-
+{/* rahrahrah */}
       <div
         ref={founderRef}
         className="flex items-center gap-10 px-[18vw] mb-32"
