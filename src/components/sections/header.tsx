@@ -41,7 +41,7 @@ export default function HeaderSection() {
     <React.Fragment>
       <header
         ref={headerRef}
-        className="relative overflow-hidden flex justify-center min-h-screen"
+        className="rah relative overflow-hidden flex justify-center min-h-screen"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#03172ec5] via-transparent to-[#03172e] pointer-events-none z-2" />
 
