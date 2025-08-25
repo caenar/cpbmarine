@@ -43,7 +43,7 @@ export default function HeaderSection() {
         ref={headerRef}
         className="relative overflow-hidden flex justify-center min-h-screen"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#03172ec5] via-transparent to-[#03172e] pointer-events-none z-2 rah" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#03172ec5] via-transparent to-[#03172e] pointer-events-none z-2" />
 
         <div className="absolute min-h-screen w-full bg-[url('/images/services/welding/diver.png')] bg-cover bg-right bg-no-repeat"></div>
 
