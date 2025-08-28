@@ -43,6 +43,23 @@ export default function HeaderSection() {
         ref={headerRef}
         className="rah relative overflow-hidden flex justify-center min-h-screen"
       >
+        <div className="z-25 flex flex-col absolute gap-7 bottom-30 right-30 text-right">
+          <h1 className="font-black text-white text-9xl leading-[0.85]">
+            <span className="text-gold-600">GOLDEN</span>
+            {/* GOLDEN */}
+            <br />
+            TRIDENT
+            <br />
+            SALVAGE
+          </h1>
+
+          <div className="h-[2px] w-full bg-gray-100 opacity-15"></div>
+
+          <h2 className="font-secondary font-bold text-white/40 text-4xl">
+            CONRADO PAZ MARINE SERVICES
+          </h2>
+        </div>
+
         <div className="absolute inset-0 bg-gradient-to-b from-[#03172ec5] via-transparent to-[#03172e] pointer-events-none z-2" />
 
         <div className="absolute min-h-screen w-full bg-[url('/images/services/welding/diver.png')] bg-cover bg-right bg-no-repeat"></div>
