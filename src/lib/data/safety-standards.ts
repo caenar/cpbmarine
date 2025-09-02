@@ -35,7 +35,7 @@ export const safetyStandards = [
   },
   {
     title: "Advanced Survey & Inspection Protocols",
-    img: "/images/safety-standards/survey.jpg",
+    img: "/images/resources/equipment/dive-gear.png",
     description:
       "We deploy advanced monitoring tools and techniques for detailed structural assessment and project planning.",
     items: [

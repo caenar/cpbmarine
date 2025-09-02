@@ -41,7 +41,7 @@ export default function HeaderSection() {
     <React.Fragment>
       <header
         ref={headerRef}
-        className="rah relative overflow-hidden flex justify-center min-h-screen"
+        className="relative overflow-hidden flex justify-center min-h-screen"
       >
         <div className="z-25 flex flex-col absolute gap-7 bottom-30 right-30 text-right">
           <h1 className="font-black text-white text-9xl leading-[0.85]">

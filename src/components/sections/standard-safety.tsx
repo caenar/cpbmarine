@@ -25,17 +25,8 @@ export default function StandardSafetySection() {
         stagger: 0.15,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 30%",
-          end: "bottom 20%",
-          scrub: true,
-        },
-      });
-
-      gsap.to(mainSectionRef.current, {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
+          start: "top 85%",
+          end: "bottom 75%",
           scrub: true,
         },
       });
@@ -51,23 +42,23 @@ export default function StandardSafetySection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: item,
-            start: `${100 + idx * 30}% center`,
-            end: `${100 + idx * 30}% 10%`,
+            start: `${100 + idx * 40}% 70%`,
+            end: `${100 + idx * 40}% center`,
             scrub: true,
           },
         });
 
         ScrollTrigger.create({
           trigger: item,
-          start: `${50 + idx * 30}% center`,
-          end: `${100 + idx * 30}% 30%`,
+          start: `${50 + idx * 30}% 70%`,
+          end: `${100 + idx * 30}% center`,
 
           onEnter: () => {
             gsap.set(img, { display: "block" });
           },
           onUpdate: (self) => {
             const progress = self.progress ?? 0;
-            const height = 1 + progress * 350;
+            const height = 1 + progress * 320;
             gsap.set(img, {
               height,
               opacity: 1 + progress,
@@ -77,13 +68,13 @@ export default function StandardSafetySection() {
 
         ScrollTrigger.create({
           trigger: item,
-          start: `${230 + idx * 30}% center`,
-          end: `${230 + idx * 30}% 30%`,
+          start: `${190 + idx * 35}% 70%`,
+          end: `${190 + idx * 35}% center`,
           scrub: true,
 
           onUpdate: (self) => {
             const progress = self.progress ?? 0;
-            const height = (1 - progress) * 350;
+            const height = (1 - progress) * 320;
             gsap.set(img, {
               height,
               opacity: 1 - progress,

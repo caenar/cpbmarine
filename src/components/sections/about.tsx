@@ -28,8 +28,8 @@ export default function AboutSection() {
         stagger: 0.15,
         scrollTrigger: {
           trigger: introRef.current,
-          start: "top 60%",
-          end: "bottom 50%",
+          start: "top 80%",
+          end: "bottom 70%",
           scrub: true,
         },
       });
@@ -42,8 +42,8 @@ export default function AboutSection() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: missionRef.current,
-          start: "top 60%",
-          end: "bottom 50%",
+          start: "top 80%",
+          end: "bottom 70%",
           scrub: true,
         },
       });
@@ -56,8 +56,8 @@ export default function AboutSection() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: visionRef.current,
-          start: "top 60%",
-          end: "bottom 50%",
+          start: "top 80%",
+          end: "bottom 70%",
           scrub: true,
         },
       });
@@ -70,8 +70,8 @@ export default function AboutSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: ref.current,
-            start: `top 60%`,
-            end: "bottom 30%",
+            start: `top 80%`,
+            end: "bottom 70%",
             scrub: true,
           },
         });
@@ -92,9 +92,10 @@ export default function AboutSection() {
           Trusted Underwater Solutions Since 2012
         </h2>
         <p className="text-foreground-600 text-lg max-w-prose">
-          Trident CBP Marine Service delivers expert underwater services — from salvage
-          and welding to scientific surveys — with a commitment to quality, affordability,
-          and safety. Proudly serving industries nationwide since 2012.
+          Trident CBP Marine Service delivers expert underwater services — from
+          salvage and welding to scientific surveys — with a commitment to
+          quality, affordability, and safety. Proudly serving industries
+          nationwide since 2012.
         </p>
       </div>
 
@@ -116,12 +117,12 @@ export default function AboutSection() {
             Affordable and Reliable Marine Expertise, Delivered Safely
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            At Trident CBP Marine Service, our mission is to deliver high-quality
-            underwater services that are accessible and cost-effective, without
-            compromising safety. Since 2012, we&apos;ve supported marine operations
-            through expert salvage, maintenance, construction, and training — always
-            guided by professionalism, innovation, and a deep respect for the marine
-            environment.
+            At Trident CBP Marine Service, our mission is to deliver
+            high-quality underwater services that are accessible and
+            cost-effective, without compromising safety. Since 2012, we&apos;ve
+            supported marine operations through expert salvage, maintenance,
+            construction, and training — always guided by professionalism,
+            innovation, and a deep respect for the marine environment.
           </p>
         </div>
       </div>
@@ -135,9 +136,9 @@ export default function AboutSection() {
             Setting the Standard for Safe and Affordable Underwater Solutions
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance w-lg">
-            To be the Philippines’ leading partner in reliable, affordable, and safe
-            underwater solutions — trusted by industries and institutions for our
-            commitment to service excellence and operational integrity.
+            To be the Philippines’ leading partner in reliable, affordable, and
+            safe underwater solutions — trusted by industries and institutions
+            for our commitment to service excellence and operational integrity.
           </p>
         </div>
         <div>

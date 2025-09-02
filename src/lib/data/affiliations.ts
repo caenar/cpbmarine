@@ -2,7 +2,7 @@ import { Anvil, Bubbles, Droplet, GlassWater, Waves } from "lucide-react";
 
 export const affiliations = [
   {
-    label: "DTI Registered rah",
+    label: "DTI Registered",
     icon: Bubbles,
   },
   {

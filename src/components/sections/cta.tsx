@@ -18,12 +18,11 @@ export default function CtaSection() {
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
         opacity: 0,
-        y: 40,
-        ease: "power2.out",
+        y: 15,
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "90% 60%",
-          end: "bottom 40%",
+          start: "top 90%",
+          end: "bottom 80%",
           scrub: true,
         },
       });
@@ -34,8 +33,8 @@ export default function CtaSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: paragraphRef.current,
-          start: "90% 60%",
-          end: "bottom 40%",
+          start: "top 80%",
+          end: "bottom 70%",
           scrub: true,
         },
       });
@@ -46,8 +45,8 @@ export default function CtaSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: buttonRef.current,
-          start: "90% 60%",
-          end: "bottom 50%",
+          start: "top 80%",
+          end: "bottom 70%",
           scrub: true,
         },
       });

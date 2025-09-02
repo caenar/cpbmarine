@@ -25,8 +25,8 @@ export default function HistorySection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "50% 40%",
-          end: "bottom 20%",
+          start: "center 70%",
+          end: "bottom 60%",
           scrub: true,
         },
       });
@@ -39,8 +39,8 @@ export default function HistorySection() {
         stagger: 0.1,
         scrollTrigger: {
           trigger: founderRef.current,
-          start: "50% 40%",
-          end: "bottom 20%",
+          start: "center 70%",
+          end: "bottom 60%",
           scrub: true,
         },
       });
@@ -51,8 +51,8 @@ export default function HistorySection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: founderRef.current,
-          start: "top 40%",
-          end: "bottom 20%",
+          start: "top 70%",
+          end: "bottom 60%",
           scrub: true,
         },
       });
@@ -62,7 +62,7 @@ export default function HistorySection() {
         ease: "none",
         scrollTrigger: {
           trigger: timelineSectionRef.current,
-          start: "20% center",
+          start: "top center",
           end: "bottom center",
           scrub: true,
         },
@@ -79,8 +79,8 @@ export default function HistorySection() {
           stagger: 0.1,
           scrollTrigger: {
             trigger: wrapper,
-            start: "top 40%",
-            end: "bottom 10%",
+            start: "top 70%",
+            end: "bottom 60%",
             scrub: true,
           },
         });
@@ -109,7 +109,7 @@ export default function HistorySection() {
       </div>
 
       <div ref={dividerRef} className="w-0 h-px bg-marine-700 my-12"></div>
-{/* rahrahrah */}
+
       <div
         ref={founderRef}
         className="flex items-center gap-10 px-[18vw] mb-32"

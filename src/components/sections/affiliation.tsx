@@ -23,8 +23,8 @@ export default function AffiliationSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: affilSectionRef.current,
-          start: "50% center",
-          end: "center 10%",
+          start: "center 70%",
+          end: "center 60%",
           scrub: true,
         },
       });
@@ -37,8 +37,8 @@ export default function AffiliationSection() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: affilSectionRef.current,
-          start: "50% center",
-          end: "center 10%",
+          start: "center 70%",
+          end: "center 60%",
           scrub: true,
         },
       });
@@ -50,8 +50,8 @@ export default function AffiliationSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: affilSectionRef.current,
-            start: "50% center",
-            end: "center 10%",
+            start: "center 70%",
+            end: "center 60%",
             scrub: true,
           },
         });

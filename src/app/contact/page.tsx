@@ -29,7 +29,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-foreground-800 text-balance">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos, rah rah saepe?
+              Dignissimos, saepe?
             </p>
           </div>
           <input type="text" name="name" placeholder="Name" />

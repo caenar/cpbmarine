@@ -17,8 +17,8 @@ export default function TestimonialSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: testSectionRef.current,
-          start: "20% 40%",
-          end: "80% 30%",
+          start: "top center",
+          end: "center center",
           scrub: true,
         },
       });
@@ -31,8 +31,8 @@ export default function TestimonialSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: testSectionRef.current,
-          start: "80% 70%",
-          end: "bottom 60%",
+          start: "top 70%",
+          end: "bottom center",
           scrub: true,
         },
       });
