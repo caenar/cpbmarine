@@ -1,6 +1,6 @@
 export const futureProspects = [
   {
-    title: "Sustainability in Marine Operations RAH",
+    title: "Sustainability in Marine Operations",
     description:
       "We're exploring reef-safe protocols, carbon-neutral logistics, and eco-conscious construction methods. The goal is to deliver high-impact underwater services while minimizing our environmental footprint.",
   },
