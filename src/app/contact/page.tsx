@@ -1,16 +1,15 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  // const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
+  // function handleChange(
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  // ) {
+  //   setForm({ ...form, [e.target.name]: e.target.value });
+  // }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
