@@ -13,7 +13,7 @@ export default function Carousel() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const interval = setInterval(() => {
         const next = (current + 1) % images.length;
 
@@ -43,7 +43,8 @@ export default function Carousel() {
       {images.map((src, i) => (
         <div
           key={i}
-          ref={(el) => el && (slidesRef.current[i] = el)}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          ref={(el: any) => el && (slidesRef.current[i] = el)}
           className="absolute inset-0 w-full h-full transition-opacity duration-1000"
           style={{
             backgroundImage: `url(${src})`,

@@ -3,33 +3,6 @@
 import Carousel from "@/components/carousel";
 import Image from "next/image";
 
-const facilities = [
-  {
-    name: "Main Dive Operations Base",
-    description:
-      "Located in Legazpi City, our base serves as the hub for all marine operations, equipment staging, and diver preparation.",
-    img: "/images/facilities/base.jpg",
-  },
-  {
-    name: "Support Vessels",
-    description:
-      "We operate a fleet of support vessels equipped for offshore dive work, including CCTV, compressors, and medical kits.",
-    img: "/images/facilities/vessels.jpg",
-  },
-  {
-    name: "Dive Equipment Warehouse",
-    description:
-      "All technical and commercial diving gear is maintained and stored at our secure warehouse, regularly inspected for compliance.",
-    img: "/images/facilities/warehouse.jpg",
-  },
-  {
-    name: "Training & Briefing Room",
-    description:
-      "A dedicated space for pre-dive briefings, safety orientations, and instructional sessions for dive teams and trainees.",
-    img: "/images/facilities/training.jpg",
-  },
-];
-
 export default function FacilitiesPage() {
   return (
     <main>

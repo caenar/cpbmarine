@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
@@ -25,7 +26,7 @@ export default function ContactPage() {
         >
           <div className="mb-2">
             <h1 className="font-secondary text-5xl font-bold mb-5">
-              Let's work together
+              Let&apos;s work together
             </h1>
             <p className="text-foreground-800 text-balance">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
