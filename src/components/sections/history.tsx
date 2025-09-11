@@ -99,7 +99,7 @@ export default function HistorySection() {
           "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
       }}
     >
-      <div className="px-[18vw]">
+      <div className="px-[8vw] md:px-[20vw]">
         <h2
           ref={titleRef}
           className="text-7xl max-w-3xl font-secondary font-black text-balance"
@@ -112,7 +112,7 @@ export default function HistorySection() {
 
       <div
         ref={founderRef}
-        className="flex items-center gap-10 px-[18vw] mb-32"
+        className="flex flex-col md:flex-row items-center gap-10 px-[8vw] md:px-[20vw] mb-32"
       >
         <Image
           className="rounded-lg h-[400px] w-[600px] object-cover"

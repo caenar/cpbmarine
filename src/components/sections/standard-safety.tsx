@@ -16,85 +16,90 @@ export default function StandardSafetySection() {
   const itemContainersRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(introRef.current!.children, {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 85%",
-          end: "bottom 75%",
-          scrub: true,
-        },
-      });
-
-      itemContainersRef.current.forEach((item, idx) => {
-        const text = item.querySelector(".text");
-        const img = item.querySelector(".placeholder");
-        if (!img) return;
-
-        gsap.to(text, {
-          opacity: 1,
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 768px)", () => {
+      const ctx = gsap.context(() => {
+        gsap.from(introRef.current!.children, {
+          opacity: 0,
+          y: 40,
           duration: 1,
           ease: "power2.out",
+          stagger: 0.15,
           scrollTrigger: {
-            trigger: item,
-            start: `${100 + idx * 40}% 70%`,
-            end: `${100 + idx * 40}% center`,
+            trigger: sectionRef.current,
+            start: "20% 85%",
+            end: "bottom 75%",
             scrub: true,
           },
         });
 
-        ScrollTrigger.create({
-          trigger: item,
-          start: `${50 + idx * 30}% 70%`,
-          end: `${100 + idx * 30}% center`,
+        itemContainersRef.current.forEach((item, idx) => {
+          const text = item.querySelector(".text");
+          const img = item.querySelector(".placeholder");
+          if (!img) return;
 
-          onEnter: () => {
-            gsap.set(img, { display: "block" });
-          },
-          onUpdate: (self) => {
-            const progress = self.progress ?? 0;
-            const height = 1 + progress * 320;
-            gsap.set(img, {
-              height,
-              opacity: 1 + progress,
-            });
-          },
+          gsap.to(text, {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: `${100 + idx * 40}% 70%`,
+              end: `${100 + idx * 40}% center`,
+              scrub: true,
+            },
+          });
+
+          ScrollTrigger.create({
+            trigger: item,
+            start: `${50 + idx * 30}% 70%`,
+            end: `${100 + idx * 30}% center`,
+
+            onEnter: () => {
+              gsap.set(img, { display: "block" });
+            },
+            onUpdate: (self) => {
+              const progress = self.progress ?? 0;
+              const height = 1 + progress * 320;
+              gsap.set(img, {
+                height,
+                opacity: 1 + progress,
+              });
+            },
+          });
+
+          ScrollTrigger.create({
+            trigger: item,
+            start: `${190 + idx * 35}% 70%`,
+            end: `${190 + idx * 35}% center`,
+            scrub: true,
+
+            onUpdate: (self) => {
+              const progress = self.progress ?? 0;
+              const height = (1 - progress) * 320;
+              gsap.set(img, {
+                height,
+                opacity: 1 - progress,
+              });
+            },
+            onLeave: () => {
+              gsap.set(img, { display: "none" });
+            },
+            onEnterBack: () => {
+              gsap.set(img, {
+                display: "block",
+                opacity: 0,
+              });
+            },
+          });
         });
+      }, sectionRef);
 
-        ScrollTrigger.create({
-          trigger: item,
-          start: `${190 + idx * 35}% 70%`,
-          end: `${190 + idx * 35}% center`,
-          scrub: true,
-
-          onUpdate: (self) => {
-            const progress = self.progress ?? 0;
-            const height = (1 - progress) * 320;
-            gsap.set(img, {
-              height,
-              opacity: 1 - progress,
-            });
-          },
-          onLeave: () => {
-            gsap.set(img, { display: "none" });
-          },
-          onEnterBack: () => {
-            gsap.set(img, {
-              display: "block",
-              opacity: 0,
-            });
-          },
-        });
-      });
-    }, sectionRef);
+      return () => ctx.revert();
+    });
 
     return () => {
-      ctx.revert();
+      mm.revert();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -102,24 +107,21 @@ export default function StandardSafetySection() {
   return (
     <section
       ref={sectionRef}
-      className="grid grid-cols-2 px-[20vw] py-32 bg-[rgba(3,_34,_66,_1)]"
+      className="grid md:grid-cols-2 px-[8vw] md:px-[20vw] py-32 bg-[rgba(3,_34,_66,_1)]"
       style={{
-        background:
-          "linear-gradient(0deg,rgba(3, 34, 66, 1) 0%, rgba(0, 0, 0, 1) 75%)",
+        background: "linear-gradient(0deg,rgba(3, 34, 66, 1) 0%, rgba(0, 0, 0, 1) 75%)",
       }}
     >
-      <div ref={introRef} className="h-full">
-        <h2 className="text-4xl font-bold font-secondary mb-4">
-          Safety Standards
-        </h2>
+      <div ref={introRef} className="h-full mb-20 md:mb-0">
+        <h2 className="text-4xl font-bold font-secondary mb-4">Safety Standards</h2>
         <p className="text-foreground-600 leading-relaxed text-balance max-w-sm">
-          We follow recognized safety standards, use certified equipment, and
-          deploy only qualified personnel — because safe operations are the
-          foundation of successful marine work.
+          We follow recognized safety standards, use certified equipment, and deploy only
+          qualified personnel — because safe operations are the foundation of successful marine
+          work.
         </p>
       </div>
 
-      <div ref={mainSectionRef} className="flex flex-col">
+      <div ref={mainSectionRef} className="flex flex-col gap-12 md:gap-0">
         {safetyStandards.map((standard, idx) => (
           <div
             ref={(el) => {
@@ -128,7 +130,7 @@ export default function StandardSafetySection() {
             key={idx}
             className="relative"
           >
-            <div className="placeholder hidden w-full opacity-0">
+            <div className="placeholder h-[290px] md:hidden md:h-[320px] w-full md:opacity-0">
               <Image
                 src={standard.img}
                 alt={"Image of standard item"}
@@ -138,10 +140,8 @@ export default function StandardSafetySection() {
               />
             </div>
 
-            <div className="text text-white p-6 z-10 opacity-0">
-              <h3 className="text-xl font-bold text-gold-400 mb-2">
-                {standard.title}
-              </h3>
+            <div className="text text-white py-5 md:p-6 z-10 md:opacity-0">
+              <h3 className="text-xl font-bold text-gold-400 mb-2">{standard.title}</h3>
               <p className="text-foreground-500 mb-3">{standard.description}</p>
               <ul className="list-disc pl-5 text-foreground-600 space-y-1">
                 {standard.items.map((point, i) => (

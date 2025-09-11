@@ -5,7 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Phone } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 
 const links = [
   { label: "Home", href: "/" },
@@ -25,6 +25,7 @@ export default function Nav() {
   const [hideShadow, setHideShadow] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
   const activePath = usePathname();
 
   useEffect(() => {
@@ -50,19 +51,20 @@ export default function Nav() {
   return (
     <div
       className={cn(
-        "z-50 fixed w-full flex justify-between items-center py-5 px-12 transition-all duration-500",
+        "z-50 fixed w-full flex justify-between items-center py-5 px-6 md:px-12 transition-all duration-500",
         hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100",
-        hideShadow ? "bg-marine-950" : "bg-transparent",
+        hideShadow ? "md:bg-marine-950" : "bg-transparent",
       )}
     >
       <Image
         priority
         src="/logos/landscape_logo.jpg"
         alt="Trident CPB Marine Services Logo"
+        className="absolute top-5"
         width={140}
         height={140}
       />
-      <nav>
+      <nav className="hidden md:block">
         <ul className="flex gap-10 items-center uppercase font-bold">
           {links.map((li, idx) => {
             const isActive = activePath === li.href;
@@ -110,6 +112,72 @@ export default function Nav() {
           </Link>
         </ul>
       </nav>
+
+      <button
+        className="md:hidden absolute z-50 right-5 top-7"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <X className="size-7 text-white" /> : <Menu className="size-7 text-white" />}
+      </button>
+
+      <div
+        className={cn(
+          "fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-marine-950 text-white flex flex-col items-start gap-6 p-6 pt-20 transition-transform duration-300 md:hidden",
+          menuOpen ? "translate-x-0" : "translate-x-full",
+        )}
+      >
+        <ul className="flex flex-col gap-6 uppercase font-bold w-full">
+          {links.map((li, idx) => {
+            const isActive = activePath === li.href;
+
+            return li.submenu ? (
+              <li key={li.label}>
+                <details className="w-full">
+                  <summary className="flex items-center justify-between cursor-pointer">
+                    {li.label} <ChevronDown className="size-4.5" />
+                  </summary>
+                  <ul className="mt-2 ml-4 flex flex-col gap-2">
+                    {li.submenu.map((sublink) => (
+                      <li key={sublink.href}>
+                        <Link
+                          href={sublink.href}
+                          className="block py-1 text-gray-300 hover:text-gold-500"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {sublink.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            ) : (
+              <li key={`${li}-${idx}`}>
+                <Link
+                  href={li.href}
+                  className={cn(
+                    "block",
+                    isActive ? "text-gold-500 font-black" : "hover:text-gray-400",
+                  )}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {li.label}
+                </Link>
+              </li>
+            );
+          })}
+          <li>
+            <Link
+              className="flex gap-2 items-center px-4 py-2 bg-gold-500 rounded-lg text-black-950"
+              href="/contact"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Phone className="size-4.5" />
+              Contact us
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

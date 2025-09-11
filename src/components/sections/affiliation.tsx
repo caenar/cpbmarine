@@ -12,7 +12,6 @@ export default function AffiliationSection() {
   const subTitleRef = useRef(null);
   const titleRef = useRef(null);
   const itemsRef = useRef<HTMLDivElement[]>([]);
-  const dividerRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,7 +22,7 @@ export default function AffiliationSection() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: affilSectionRef.current,
-          start: "center 70%",
+          start: "top 70%",
           end: "center 60%",
           scrub: true,
         },
@@ -37,24 +36,10 @@ export default function AffiliationSection() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: affilSectionRef.current,
-          start: "center 70%",
+          start: "10% 70%",
           end: "center 60%",
           scrub: true,
         },
-      });
-
-      dividerRefs.current.forEach((el) => {
-        gsap.to(el, {
-          height: "100%",
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: affilSectionRef.current,
-            start: "center 70%",
-            end: "center 60%",
-            scrub: true,
-          },
-        });
       });
     }, affilSectionRef);
 
@@ -64,7 +49,7 @@ export default function AffiliationSection() {
   return (
     <section
       ref={affilSectionRef}
-      className="flex flex-col bg-black justify-center items-center py-36"
+      className="flex flex-col bg-black justify-center items-left md:items-center py-36 px-[8vw] md:px-0"
     >
       <h3
         ref={subTitleRef}
@@ -76,7 +61,7 @@ export default function AffiliationSection() {
         Recognized by National and International Authorities
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-x-24 gap-y-10 py-10 px-6 w-full max-w-[45vw] mx-auto">
+      <div className="flex flex-wrap md:justify-center gap-x-24 gap-y-10 py-10 md:px-6 w-full md:max-w-[50vw] md:mx-auto">
         {affiliations.map((affil, idx) => (
           <div
             key={`affil-${idx}`}
