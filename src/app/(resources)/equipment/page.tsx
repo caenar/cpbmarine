@@ -7,7 +7,7 @@ import React from "react";
 export default function EquipmentPage() {
   return (
     <main>
-      <section className="px-[20vw] pt-32 pb-28 text-white-100">
+      <section className="px-[8vw] md:px-[20vw] pt-32 pb-28 text-white-100">
         <h1 className="text-6xl font-bold font-secondary mb-4">
           Equipment & Technology
         </h1>
@@ -18,9 +18,9 @@ export default function EquipmentPage() {
         </p>
       </section>
 
-      <section className="px-[10vw] pt-32 pb-62 bg-foreground-100 grid grid-cols-2 gap-20">
+      <section className="px-[8vw] md:px-[10vw] pt-32 pb-62 bg-foreground-100 grid md:grid-cols-2 gap-15 md:gap-20">
         {equipment.map((item, i) => (
-          <div key={i} className="grid grid-cols-2 gap-5 items-center">
+          <div key={i} className="grid md:grid-cols-2 gap-2 md:gap-5 items-center">
             <div className="h-[240px] overflow-hidden mb-3">
               <Image
                 src={item.img}

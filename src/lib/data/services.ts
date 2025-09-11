@@ -1,11 +1,11 @@
 export const services = [
   {
-    title: "Underwater Salvage & Refloating",
+    title: "Salvage & Refloating",
     desc: "Expert recovery of sunken vessels, barges, and marine equipment with safety-focused salvage operations.",
     img: "/images/services/refloating-recovery/refloating.png",
   },
   {
-    title: "Underwater Survey & Damage Assessment",
+    title: "Survey & Damage Assessment",
     desc: "Underwater inspections to assess structural damage and guide marine repair or reconstruction projects.",
     img: "/images/services/welding/1.png",
   },
@@ -15,12 +15,12 @@ export const services = [
     img: "/images/services/uw-cutting/4.jpg",
   },
   {
-    title: "Underwater Welding & Cutting",
+    title: "Welding & Cutting",
     desc: "Precision underwater fabrication and repair using certified divers and specialized welding equipment.",
     img: "/images/services/uw-cutting/1.png",
   },
   {
-    title: "Underwater Construction Support",
+    title: "Construction Support",
     desc: "Diver-assisted construction for marine projects, including installation, drilling, and reinforcement works.",
     img: "/images/services/uw-construction/1.JPG",
   },

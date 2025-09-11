@@ -45,7 +45,7 @@ export default function HeaderSection() {
       >
         <div
           className="
-            z-25 flex flex-col absolute gap-7 md:bottom-30 md:right-30 md:text-right
+            z-25 flex flex-col absolute gap-7 md:bottom-80 md:right-90 md:text-right
             bottom-1/4 right-1/2 text-center translate-x-1/2 translate-y-1/2
           "
         >

@@ -17,7 +17,7 @@ const links = [
       { label: "Equipment", href: "/equipment" },
     ],
   },
-  { label: "Gallery", href: "/gallery" },
+  // { label: "Gallery", href: "/gallery" },
   { label: "Future Prospects", href: "/future-prospects" },
 ];
 
@@ -51,19 +51,22 @@ export default function Nav() {
   return (
     <div
       className={cn(
-        "z-50 fixed w-full flex justify-between items-center py-5 px-6 md:px-12 transition-all duration-500",
+        "z-50 w-full fixed flex justify-between items-center py-5 px-6 md:px-12 transition-all duration-500",
         hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100",
-        hideShadow ? "md:bg-marine-950" : "bg-transparent",
+        hideShadow ? "md:bg-marine-950" : "bg-transparent"
       )}
     >
-      <Image
-        priority
-        src="/logos/landscape_logo.jpg"
-        alt="Trident CPB Marine Services Logo"
-        className="absolute top-5"
-        width={140}
-        height={140}
-      />
+      <Link href="/">
+        <Image
+          priority
+          src="/logos/landscape_logo.jpg"
+          alt="Trident CPB Marine Services Logo"
+          className="md:relative md:top-auto sm:absolute top-5"
+          width={140}
+          height={140}
+        />
+      </Link>
+
       <nav className="hidden md:block">
         <ul className="flex gap-10 items-center uppercase font-bold">
           {links.map((li, idx) => {
@@ -94,7 +97,7 @@ export default function Nav() {
               <Link
                 className={cn(
                   !isActive && "hover:text-gray-400 transition-colors",
-                  isActive && "text-gold-500 font-black",
+                  isActive && "text-gold-500 font-black"
                 )}
                 key={`${li}-${idx}`}
                 href={li.href}
@@ -117,13 +120,17 @@ export default function Nav() {
         className="md:hidden absolute z-50 right-5 top-7"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        {menuOpen ? <X className="size-7 text-white" /> : <Menu className="size-7 text-white" />}
+        {menuOpen ? (
+          <X className="size-7 text-white" />
+        ) : (
+          <Menu className="size-7 text-white" />
+        )}
       </button>
 
       <div
         className={cn(
           "fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-marine-950 text-white flex flex-col items-start gap-6 p-6 pt-20 transition-transform duration-300 md:hidden",
-          menuOpen ? "translate-x-0" : "translate-x-full",
+          menuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         <ul className="flex flex-col gap-6 uppercase font-bold w-full">
@@ -157,7 +164,7 @@ export default function Nav() {
                   href={li.href}
                   className={cn(
                     "block",
-                    isActive ? "text-gold-500 font-black" : "hover:text-gray-400",
+                    isActive ? "text-gold-500 font-black" : "hover:text-gray-400"
                   )}
                   onClick={() => setMenuOpen(false)}
                 >

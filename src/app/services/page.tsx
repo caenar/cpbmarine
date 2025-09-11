@@ -8,16 +8,7 @@ import Link from "next/link";
 export default function ServicesPage() {
   return (
     <main>
-      <section className="relative h-[70vh] flex items-center justify-center text-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/services/gov-training/training.JPG"
-            alt="Underwater service background"
-            fill
-            className="object-cover brightness-[0.35]"
-            priority
-          />
-        </div>
+      <section className="relative h-[60vh] flex items-center justify-center text-white overflow-hidden">
 
         <div className="z-10 text-center px-6 max-w-3xl">
           <h1 className="text-5xl md:text-6xl font-secondary font-bold text-balance mb-6">
@@ -38,7 +29,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="bg-foreground-100 pt-22 py-38">
-        <div className="px-[20vw] mb-20">
+        <div className="px-[8vw] md:px-[20vw] mb-20">
           <h1 className="text-6xl font-bold font-secondary text-marine-900 mb-4">
             Our Services
           </h1>
@@ -49,14 +40,16 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="px-[10vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="px-[8vw] md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {services.map((service, i) => (
             <div key={i} className="flex flex-col overflow-hidden bg-marine-50">
-              <div className="h-[500px] w-full bg-gray-300">
-                <img
+              <div className="h-[350px] md:h-[500px] w-full bg-gray-300">
+                <Image
                   src={service.img}
                   alt={service.title}
                   className="w-full h-full object-cover"
+                  width={1500}
+                  height={1500}
                 />
               </div>
 
@@ -69,7 +62,7 @@ export default function ServicesPage() {
                   {service.title}
                 </h3>
 
-                <p className="text-foreground-700 mb-4 leading-relaxed flex-grow">
+                <p className="text-foreground-700 h-[80px] mb-4 leading-relaxed flex-grow">
                   {service.desc}
                 </p>
 

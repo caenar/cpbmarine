@@ -30,7 +30,7 @@ export default function Carousel() {
         });
 
         setCurrent(next);
-      }, 4000); // change every 4s
+      }, 4000);
 
       return () => clearInterval(interval);
     });
@@ -39,7 +39,7 @@ export default function Carousel() {
   }, [current]);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className="relative w-screen h-[100vw] md:h-screen overflow-hidden">
       {images.map((src, i) => (
         <div
           key={i}

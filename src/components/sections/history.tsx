@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ export default function HistorySection() {
   const timelineLineRef = useRef<HTMLDivElement | null>(null);
   const timelineWrappersRef = useRef<HTMLDivElement[]>([]);
   const timelineSectionRef = useRef<HTMLDivElement | null>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -95,14 +97,13 @@ export default function HistorySection() {
       ref={sectionRef}
       className="py-32 flex flex-col"
       style={{
-        background:
-          "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
+        background: "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
       }}
     >
       <div className="px-[8vw] md:px-[20vw]">
         <h2
           ref={titleRef}
-          className="text-7xl max-w-3xl font-secondary font-black text-balance"
+          className="text-6xl md:text-7xl max-w-3xl font-secondary font-black text-balance"
         >
           The History of Conrad Paz Marine Solutions
         </h2>
@@ -123,8 +124,8 @@ export default function HistorySection() {
         />
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
-            &quot;We started with equipment and passion — now we&apos;re shaping
-            the future of underwater services in the Philippines.&quot;
+            &quot;We started with equipment and passion — now we&apos;re shaping the
+            future of underwater services in the Philippines.&quot;
           </h3>
           <p className="font-bold">Conrado Paz</p>
           <p className="text-foreground-400">Founder, CBP Marine Solutions</p>
@@ -135,7 +136,7 @@ export default function HistorySection() {
         {/* vertical line */}
         <div
           ref={timelineLineRef}
-          className="left-[50%] w-[1.2px] bg-foreground-800 h-0 absolute"
+          className="left-[50%] md:left-[50%] w-[1.2px] bg-foreground-800 h-0 absolute"
         />
 
         {/* items */}
@@ -150,14 +151,14 @@ export default function HistorySection() {
               }}
               className={cn(
                 "self-center relative flex gap-5",
-                isEven ? "flex" : "flex-row-reverse",
+                isMobile ? "flex" : isEven ? "flex" : "flex-row-reverse"
               )}
             >
-              <div className="w-xs shrink-0">
+              <div className="md:w-xs shrink-0">
                 <h4
                   className={cn(
                     "font-secondary font-bold text-white",
-                    isEven ? "text-right" : "text-left",
+                    isMobile ? "text-right w-[4ch]": isEven ? "text-right" : "text-left"
                   )}
                 >
                   {item.date}
@@ -168,13 +169,11 @@ export default function HistorySection() {
                 <div className="bg-gold-500 rounded-full h-5 w-5 border-6 border-[rgba(3,_34,_66,_1)]" />
               </div>
 
-              <div className="w-xs bg-foreground-100 py-4 px-6 rounded overflow-hidden">
+              <div className="w-2xs md:w-xs bg-foreground-100 py-4 px-6 rounded overflow-hidden">
                 <h4 className="font-bold font-secondary text-xl text-marine-800 mb-1">
                   {item.title}
                 </h4>
-                <p className="text-foreground-600 text-sm">
-                  {item.description}
-                </p>
+                <p className="text-foreground-600 text-sm">{item.description}</p>
               </div>
             </div>
           );

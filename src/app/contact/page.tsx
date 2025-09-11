@@ -17,11 +17,11 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="grid grid-cols-[40%_1fr] min-h-screen">
-      <div className="flex bg-foreground-100 w-full h-full items-center justify-center">
+    <main className="grid md:grid-cols-[40%_1fr] min-h-screen">
+      <div className="order-2 md:order-1 flex bg-foreground-100 w-full h-full items-center justify-center px-10 md:px-0">
         <form
           onSubmit={handleSubmit}
-          className="grid gap-10 w-lg text-marine-900"
+          className="grid gap-10 md:w-lg text-marine-900"
         >
           <div className="mb-2">
             <h1 className="font-secondary text-5xl font-bold mb-5">
@@ -55,7 +55,7 @@ export default function ContactPage() {
           </button>
         </form>
       </div>
-      <div className="bg-cover bg-[url('/images/services/uw-cutting/2.png')] bg-marine-300 bg-blend-multiply"></div>
+      <div className="order-1 md:order-2 bg-cover bg-[url('/images/services/uw-cutting/2.png')] bg-marine-300 bg-blend-multiply"></div>
     </main>
   );
 }

@@ -44,18 +44,18 @@ export default function TestimonialSection() {
   return (
     <section
       ref={testSectionRef}
-      className="flex flex-col bg-[rgba(3,_34,_66,_1)] py-36 px-[22vw] justify-center items-center"
+      className="flex flex-col bg-[rgba(3,_34,_66,_1)] py-36 px-[8vw] md:px-[22vw] justify-center items-left md:items-center"
     >
       <div className="max-w-prose mb-18">
-        <h2 className="text-marine-100 font-bold font-secondary text-7xl text-center mb-5 text-balance">
+        <h2 className="text-marine-100 font-bold font-secondary text-6xl md:text-7xl md:text-center mb-5 text-balance">
           Companies we&apos;ve worked with
         </h2>
-        <p className="text-gray-300 text-center">
+        <p className="text-gray-300 md:text-center">
           These are just some of the organizations and institutions that have
           trusted Trident CBP Marine Services through the years.
         </p>
       </div>
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-white text-lg font-medium">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 text-white text-lg font-medium">
         {clients.map((c, i) => (
           <li
             key={i}

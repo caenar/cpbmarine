@@ -58,7 +58,7 @@ export default function CtaSection() {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col justify-center items-center py-32 px-[18vw] text-foreground-100 text-center"
+      className="flex flex-col justify-center items-center py-32 px-[8vw] md:px-[18vw] text-foreground-100 text-center"
       style={{
         background:
           "linear-gradient(0deg,rgba(1, 13, 26, 1) 0%, rgba(3, 34, 66, 1) 100%)",

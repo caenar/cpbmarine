@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-marine-950 text-foreground-600 py-16 px-[18vw]">
+    <footer className="bg-marine-950 text-foreground-600 py-16 px-[8vw] md:px-[18vw]">
       <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
         <div className="max-w-md">
           <Image

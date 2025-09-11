@@ -6,7 +6,7 @@ import React from "react";
 export default function FutureProspectsPage() {
   return (
     <main>
-      <section className="px-[20vw] py-32">
+      <section className="px-[8vw] md:px-[20vw] py-32">
         <h1 className="text-6xl font-bold font-secondary mb-4">Looking Ahead</h1>
         <p className="text-lg text-foreground-600 max-w-prose leading-relaxed">
           At Trident CBP Marine Services, we believe that continuous growth, adaptation,
@@ -15,10 +15,10 @@ export default function FutureProspectsPage() {
         </p>
       </section>
 
-      <section className="px-[10vw] grid gap-10 bg-foreground-100 pt-32 pb-52">
+      <section className="px-[8vw] md:px-[10vw] grid gap-10 bg-foreground-100 pt-32 pb-52">
         {futureProspects.map((item, i) => (
           <React.Fragment key={i}>
-            <div className="flex gap-15 pb-5">
+            <div className="flex gap-6 md:gap-15 pb-5">
               <span className="text-6xl font-bold text-marine-300">
                 {String(i + 1).padStart(2, "0")}
               </span>
