@@ -31,7 +31,7 @@ export default function HeaderSection() {
           duration: 1,
           ease: "power2.out",
         },
-        "<+0.5"
+        "<+0.5",
       );
     }, containerRef);
 
@@ -45,21 +45,17 @@ export default function HeaderSection() {
       >
         <div
           className="
-            z-25 flex flex-col absolute gap-7 md:bottom-80 md:right-90 md:text-right
+            z-25 flex flex-col absolute gap-5 md:bottom-35 md:right-100 md:text-right
             bottom-1/4 right-1/2 text-center translate-x-1/2 translate-y-1/2
           "
         >
-          <h1 className="font-black text-white text-7xl md:text-9xl leading-[0.85]">
-            <span className="text-gold-600">GOLDEN</span>
-            <br />
-            TRIDENT
-            <br />
-            SALVAGE
+          <h1 className="font-black text-white text-4xl md:text-5xl leading-[0.85]">
+            GOLDEN TRIDENT SALVAGE
           </h1>
 
           <div className="h-[2px] w-full bg-gray-100 opacity-15"></div>
 
-          <h2 className="font-secondary font-bold text-white/40 text-4xl">
+          <h2 className="font-secondary font-bold text-white/40 text-5xl">
             CONRADO PAZ MARINE SERVICES
           </h2>
         </div>
