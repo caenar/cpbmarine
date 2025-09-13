@@ -70,7 +70,7 @@ export default function Nav() {
               className="origin-top bg-gold-500 text-foreground-950 col-span-2 uppercase font-bold"
             >
               <div className="flex items-center justify-center gap-3 px-4 py-2">
-                <span>DISCLAIMER: Under Development</span>
+                <span>Page Under Construction and Development</span>
                 <button onClick={() => setShowBanner(false)}>
                   <X className="size-4.5 cursor-pointer" />
                 </button>
