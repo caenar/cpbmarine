@@ -8,7 +8,6 @@ export const safetyStandards = [
       "DTI Registered – Department of Trade and Industry",
       "Legazpi City Mayor’s Permit – Marine services on-call",
       "PhilGEPS Registered – Eligible for government marine projects",
-      "PCAB Accredited – Through Actuate Builders (Category A Contractor)",
     ],
   },
   {

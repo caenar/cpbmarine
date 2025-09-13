@@ -1,5 +1,3 @@
-import { Anvil, Bubbles, Droplet, GlassWater, Waves } from "lucide-react";
-
 export const affiliations = [
   {
     label: "DTI Registered",
