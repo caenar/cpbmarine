@@ -20,6 +20,8 @@ export default function FacilitiesPage() {
             <h3 className="w-sm font-bold font-secondary text-2xl">Training Facility</h3>
             <p className="text-marine-400">Barangay Sula Bacacay, Albay</p>
           </div>
+          {/* NOTE: For scuba diving, business office, warehouse office (supplies), fabrication area, 
+          dive training facilitiy. Full-service industrial dive center */}
           <div className="text-marine-800">
             <p className="w-sm mb-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, aliquid

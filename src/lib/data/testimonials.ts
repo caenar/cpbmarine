@@ -12,7 +12,7 @@ export const testimonials = [
     name: "Aboiitiz Power / Shipping Philippines",
   },
   {
-    name: "RASI Regal Arraste and Shipping Inc.",
+    name: "Regal Arraste and Shipping Inc.",
   },
   {
     name: "Philippine Ports Authority",
@@ -43,5 +43,32 @@ export const testimonials = [
   },
   {
     name: "Philippine Navy / Naval Special Operations Group",
+  },
+  {
+    name: "ICTSI MICT",
+  },
+  {
+    name: "ZKR Construction",
+  },
+  {
+    name: "WWF Philippines",
+  },
+  {
+    name: "Department of Tourism",
+  },
+  {
+    name: "China Harbor Engineering Corporation",
+  },
+  {
+    name: "Pasay Harbor Construction Corporation",
+  },
+  {
+    name: "SM Development Corporation",
+  },
+  {
+    name: "North Gulf Marine",
+  },
+  {
+    name: "Globe Coco Oil Plant",
   },
 ];

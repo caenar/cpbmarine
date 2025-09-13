@@ -6,8 +6,9 @@ export const safetyStandards = [
       "Trident CBP Marine Services is a fully registered and accredited contractor, authorized to operate under national and local government regulations.",
     items: [
       "DTI Registered – Department of Trade and Industry",
-      "Legazpi City Mayor’s Permit – Marine services on-call",
+      "Mayor’s Permit – Marine services",
       "PhilGEPS Registered – Eligible for government marine projects",
+      "PPA Permit - Port of Manila",
     ],
   },
   {
@@ -16,14 +17,14 @@ export const safetyStandards = [
     description:
       "All dive operations are conducted using surface-supplied air diving systems with full surface communication and visual monitoring.",
     items: [
-      "Kirby Morgan band masks with CCTV and two-way comms",
+      "Kirby Morgan helmets with CCTV and two-way comms",
       "Surface-supplied air ensures safety and supervision",
       "Real-time diver monitoring from surface crew",
     ],
   },
   {
     title: "Advanced Survey & Inspection Protocols",
-    img: "/images/resources/equipment/dive-gear.png",
+    img: "/images/services/survey/1.jpeg",
     description:
       "We deploy advanced monitoring tools and techniques for detailed structural assessment and project planning.",
     items: [

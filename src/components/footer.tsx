@@ -14,7 +14,7 @@ export default function Footer() {
             className="mb-5"
           />
           <p className="font-bold">DTI Registered. PhilGEPS Registered.</p>
-          <p>Certified marine services, above and below expectations.</p>
+          <p>Certified marine services.</p>
         </div>
 
         <div className="flex gap-32 flex-wrap">

@@ -54,7 +54,6 @@ export default function StandardSafetySection() {
             trigger: item,
             start: `${100 + idx * 30}% 70%`,
             end: `${100 + idx * 30}% center`,
-            markers: true,
 
             onEnter: () => {
               gsap.set(img, { display: "block" });
@@ -74,7 +73,6 @@ export default function StandardSafetySection() {
             start: `${190 + idx * 35}% 70%`,
             end: `${350 + idx * 35}% center`,
             scrub: true,
-            markers: true,
 
             onUpdate: (self) => {
               const progress = self.progress ?? 0;
