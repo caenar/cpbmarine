@@ -26,7 +26,7 @@ export default function HeaderSection() {
       tl.to(
         diverRef2.current,
         {
-          translateY: "30vh",
+          translateY: "15vh",
           opacity: 0,
           duration: 1,
           ease: "power2.out",
@@ -49,7 +49,7 @@ export default function HeaderSection() {
             bottom-1/4 right-1/2 text-center translate-x-1/2 translate-y-1/2
           "
         >
-          <h1 className="font-black text-white text-4xl md:text-5xl leading-[0.85]">
+          <h1 className="font-secondary font-black text-white text-4xl md:text-5xl leading-[0.85]">
             GOLDEN TRIDENT SALVAGE
           </h1>
 
@@ -72,10 +72,10 @@ export default function HeaderSection() {
       <section className="flex justify-center items-center h-screen">
         <div ref={diverRef2}>
           <Image
-            src="/images/.previous/asset1_rah.png"
+            src="/images/4.png"
             alt="Picture of scuba diver"
-            width={1100}
-            height={1100}
+            width={750}
+            height={750}
             className="mb-5 -translate-x-1/4 translate-y-[5vh] z-5"
           />
         </div>

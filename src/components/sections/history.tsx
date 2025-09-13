@@ -102,11 +102,12 @@ export default function HistorySection() {
       }}
     >
       <div className="px-[8vw] md:px-[20vw]">
+        <span className="uppercase text-3xl text-foreground-600">The History</span>
         <h2
           ref={titleRef}
-          className="text-6xl md:text-7xl max-w-3xl font-secondary font-black text-balance"
+          className="text-6xl md:text-7xl max-w-3xl font-secondary uppercase font-black text-balance"
         >
-          The History of Conrado Paz Marine Solutions
+          Conrado Paz Marine Trident Salvage
         </h2>
       </div>
 

@@ -1,7 +1,7 @@
 export const safetyStandards = [
   {
     title: "Certified and Authorized",
-    img: "/images/affiliations/1.jpg",
+    img: "/images/3.jpeg",
     description:
       "Trident CBP Marine Services is a fully registered and accredited contractor, authorized to operate under national and local government regulations.",
     items: [
@@ -20,17 +20,6 @@ export const safetyStandards = [
       "Kirby Morgan band masks with CCTV and two-way comms",
       "Surface-supplied air ensures safety and supervision",
       "Real-time diver monitoring from surface crew",
-    ],
-  },
-  {
-    title: "International Safety Standards",
-    img: "/images/resources/equipment/dive-gear.png",
-    description:
-      "Trident follows globally accepted commercial diving protocols to maintain safe and effective marine operations.",
-    items: [
-      "Diving procedures follow Accepted Code of Practice Standards (ACOPS)",
-      "Medical compliance aligned with IMCA D 020",
-      "Use of certified and regularly maintained dive gear",
     ],
   },
   {

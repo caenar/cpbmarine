@@ -105,7 +105,7 @@ export default function AboutSection() {
         <div>
           <Image
             className="rounded-lg object-cover md:h-[400px] md:w-[550px]"
-            src="/images/services/uw-cutting/1.png"
+            src="/images/2.jpeg"
             alt="Mission image"
             width={400}
             height={400}

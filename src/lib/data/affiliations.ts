@@ -3,22 +3,31 @@ import { Anvil, Bubbles, Droplet, GlassWater, Waves } from "lucide-react";
 export const affiliations = [
   {
     label: "DTI Registered",
-    icon: Bubbles,
+    from: "/logos/dti.svg"
   },
   {
     label: "PhilGEPS Registered",
-    icon: Waves,
+    from: "/logos/philgeps.svg"
   },
   {
     label: "TESDA Certified Workforce",
-    icon: Anvil,
-  },
-  {
-    label: "PCAB Accredited",
-    icon: Droplet,
+    from: "/logos/tesda.svg"
   },
   {
     label: "PADI Training Provider",
-    icon: GlassWater,
+    from: "/logos/padi.svg"
+  },
+  {
+    label: "PPA Contractor Permit",
+    from: "/logos/ppa.svg"
+  },
+  {
+    label: "Marina License",
+    subLabel: "In progress",
+    from: "/logos/marina.svg"
+  },
+    {
+    label: "ICTSI Accredited",
+    from: "/logos/ictsi.svg"
   },
 ];

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { affiliations } from "@/lib/data/affiliations";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,15 +69,25 @@ export default function AffiliationSection() {
             ref={(el) => {
               if (el) itemsRef.current[idx] = el;
             }}
-            className="flex gap-4 items-center max-w-[28ch]"
+            className="flex gap-4 items-center"
           >
-            <affil.icon
-              size={42}
-              strokeWidth={1.5}
-              className="text-marine-300 shrink-0"
-            />
-            <h3 className="font-bold text-xl text-marine-300 text-balance">
+            <div className="h-[70px]">
+              <Image
+                src={affil.from}
+                width={1500}
+                height={1500}
+                alt={`Image of ${affil.label}`}
+                className="text-marine-300 shrink-0 w-full h-full object-fit"
+              />
+            </div>
+            <h3 className="font-bold text-xl text-marine-300 text-balance leading-[1]">
               {affil.label}
+              {affil.subLabel && (
+                <>
+                  <br />
+                  <span className="uppercase text-sm text-foreground-800">{affil.subLabel}</span>
+                </>
+              )}
             </h3>
           </div>
         ))}
