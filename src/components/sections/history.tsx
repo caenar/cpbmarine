@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { timeline } from "@/lib/data/timeline";
 import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
