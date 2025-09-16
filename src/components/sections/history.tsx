@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import useIsMobile from "@/hooks/useIsMobile";
+import Carousel from "../carousel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +21,7 @@ export default function HistorySection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(titleRef.current, {
+      gsap.from(titleRef.current!.querySelectorAll("span, h2"), {
         opacity: 0,
         y: 40,
         duration: 1,
@@ -33,15 +34,15 @@ export default function HistorySection() {
         },
       });
 
-      gsap.from(founderRef.current!.querySelectorAll("img, h3, p"), {
+      gsap.from(founderRef.current!.querySelectorAll("div, h3, p"), {
         opacity: 0,
-        y: 50,
+        y: 30,
         duration: 1,
         ease: "power2.out",
         stagger: 0.1,
         scrollTrigger: {
           trigger: founderRef.current,
-          start: "center 70%",
+          start: "top 80%",
           end: "bottom 60%",
           scrub: true,
         },
@@ -92,21 +93,27 @@ export default function HistorySection() {
     return () => ctx.revert();
   }, []);
 
+  const images = [
+    "/images/team/1.jpg",
+    "/images/team/2.jpg",
+    "/images/team/3.jpeg",
+    "/images/team/4.png",
+    "/images/team/5.png",
+    "/images/team/6.png",
+    "/images/team/7.png",
+  ];
+
   return (
     <section
       ref={sectionRef}
       className="py-32 flex flex-col"
       style={{
-        background:
-          "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
+        background: "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
       }}
     >
-      <div className="px-[8vw] md:px-[20vw]">
+      <div ref={titleRef} className="px-[8vw] md:px-[20vw]">
         <span className="uppercase text-3xl text-foreground-600">The History</span>
-        <h2
-          ref={titleRef}
-          className="text-6xl md:text-7xl max-w-3xl font-secondary uppercase font-black text-balance"
-        >
+        <h2 className="text-6xl md:text-7xl max-w-3xl font-secondary uppercase font-black text-balance">
           Conrado Paz Marine Trident Salvage
         </h2>
       </div>
@@ -117,17 +124,13 @@ export default function HistorySection() {
         ref={founderRef}
         className="flex flex-col md:flex-row items-center gap-10 px-[8vw] md:px-[20vw] mb-32"
       >
-        <Image
-          className="rounded-lg h-[400px] w-[600px] object-cover"
-          src="/images/team/divers.JPG"
-          alt="Mission image"
-          width={2000}
-          height={2000}
-        />
+        <div>
+          <Carousel width={600} height={400} images={images} className="rounded-lg"/>
+        </div>
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
-            &quot;We started with equipment and passion — now we&apos;re shaping
-            the future of underwater services in the Philippines.&quot;
+            &quot;We started with equipment and passion — now we&apos;re shaping the
+            future of underwater services in the Philippines.&quot;
           </h3>
           <p className="font-bold">Conrado Paz</p>
           <p className="text-foreground-400">Founder, CBP Marine Solutions</p>
@@ -153,18 +156,14 @@ export default function HistorySection() {
               }}
               className={cn(
                 "self-center relative flex gap-5",
-                isMobile ? "flex" : isEven ? "flex" : "flex-row-reverse",
+                isMobile ? "flex" : isEven ? "flex" : "flex-row-reverse"
               )}
             >
               <div className="md:w-xs shrink-0">
                 <h4
                   className={cn(
                     "font-secondary font-bold text-white",
-                    isMobile
-                      ? "text-right w-[4ch]"
-                      : isEven
-                        ? "text-right"
-                        : "text-left",
+                    isMobile ? "text-right w-[4ch]" : isEven ? "text-right" : "text-left"
                   )}
                 >
                   {item.date}
@@ -179,9 +178,7 @@ export default function HistorySection() {
                 <h4 className="font-bold font-secondary text-xl text-marine-800 mb-1">
                   {item.title}
                 </h4>
-                <p className="text-foreground-600 text-sm">
-                  {item.description}
-                </p>
+                <p className="text-foreground-600 text-sm">{item.description}</p>
               </div>
             </div>
           );

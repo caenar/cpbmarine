@@ -2,13 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { cn } from "@/lib/utils";
 
-const images = [
-  "/images/resources/office/1.JPG",
-  "/images/resources/office/2.JPG",
-];
-
-export default function Carousel() {
+export default function Carousel({
+  height,
+  width,
+  className,
+  images,
+}: {
+  height?: number;
+  width?: number;
+  className?: string;
+  images: string[];
+}) {
   const slidesRef = useRef<HTMLDivElement[]>([]);
   const [current, setCurrent] = useState(0);
 
@@ -36,10 +42,18 @@ export default function Carousel() {
     });
 
     return () => ctx.revert();
-  }, [current]);
+  }, [current, images.length]);
 
   return (
-    <div className="relative w-screen h-[100vw] md:h-screen overflow-hidden">
+    <div
+      className={cn(
+        "relative md:h-screen overflow-hidden",
+        !height && "h-screen",
+        !width && "w-screen",
+        className
+      )}
+      style={{ height: height ? `${height}px` : "", width: width ? `${width}px` : "" }}
+    >
       {images.map((src, i) => (
         <div
           key={i}

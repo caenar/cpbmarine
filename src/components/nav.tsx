@@ -5,7 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ArrowUp, ChevronDown, Menu, Phone, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
@@ -29,6 +29,7 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
   const activePath = usePathname();
+  const [topButtonVisible, setTopButtonVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,14 +51,41 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > window.innerHeight / 2) {
+        setTopButtonVisible(true);
+      } else {
+        setTopButtonVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <React.Fragment>
+      <button
+        onClick={scrollToTop}
+        className={`z-99 fixed cursor-pointer bottom-6 right-6 p-3 rounded-full transition-all ${
+          topButtonVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 pointer-events-none translate-y-4"
+        } bg-gold-600 hover:bg-gold-900 text-white shadow-lg`}
+      >
+        <ArrowUp className="text-marine-950"/>
+      </button>
       <div
         className={cn(
           "z-50 w-full fixed grid grid-cols-2 grid-rows-[fit-content_100%] justify-between items-center gap-5 transition-all duration-500",
           hideNav ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100",
           hideShadow ? "md:bg-marine-950" : "bg-transparent",
-          showBanner ? "pb-5" : "py-5",
+          showBanner ? "pb-5" : "py-5"
         )}
       >
         <AnimatePresence>
@@ -120,7 +148,7 @@ export default function Nav() {
                 <Link
                   className={cn(
                     !isActive && "hover:text-gray-400 transition-colors",
-                    isActive && "text-gold-500 font-black",
+                    isActive && "text-gold-500 font-black"
                   )}
                   key={`${li}-${idx}`}
                   href={li.href}
@@ -153,7 +181,7 @@ export default function Nav() {
         <div
           className={cn(
             "fixed top-0 right-0 h-screen w-3/4 max-w-xs bg-marine-950 text-white flex flex-col items-start gap-6 p-6 pt-20 transition-transform duration-300 md:hidden",
-            menuOpen ? "translate-x-0" : "translate-x-full",
+            menuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
           <ul className="flex flex-col gap-6 uppercase font-bold w-full">
@@ -187,9 +215,7 @@ export default function Nav() {
                     href={li.href}
                     className={cn(
                       "block",
-                      isActive
-                        ? "text-gold-500 font-black"
-                        : "hover:text-gray-400",
+                      isActive ? "text-gold-500 font-black" : "hover:text-gray-400"
                     )}
                     onClick={() => setMenuOpen(false)}
                   >

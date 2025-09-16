@@ -3,14 +3,18 @@
 import Carousel from "@/components/carousel";
 import Image from "next/image";
 
+const images = ["/images/resources/office/1.JPG", "/images/resources/office/2.JPG"];
+
 export default function FacilitiesPage() {
   return (
     <main>
       <section className="px-[8vw] md:px-[20vw] pt-36 pb-20 bg-marine-900 text-white">
         <h1 className="text-6xl font-bold font-secondary mb-4">Our Facilities</h1>
         <p className="text-lg text-foreground-600 max-w-prose leading-relaxed">
-          Our operations are supported by purpose-built facilities designed to ensure the
-          safety, readiness, and efficiency of every underwater deployment.
+          Designed to function together as a full-service industrial dive center. From
+          offices and logistics support to training, fabrication, and active scuba
+          operations, each site contributes to delivering reliable and comprehensive
+          marine services.
         </p>
       </section>
 
@@ -20,18 +24,13 @@ export default function FacilitiesPage() {
             <h3 className="w-sm font-bold font-secondary text-2xl">Training Facility</h3>
             <p className="text-marine-400">Barangay Sula Bacacay, Albay</p>
           </div>
-          {/* NOTE: For scuba diving, business office, warehouse office (supplies), fabrication area, 
-          dive training facilitiy. Full-service industrial dive center */}
           <div className="text-marine-800">
             <p className="w-sm mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, aliquid
-              pariatur eius, ipsam consectetur optio aspernatur incidunt maxime
-              exercitationem atque adipisci voluptatibus sequi doloremque consequatur
-              voluptatum, quidem velit inventore a!
-            </p>
-            <p className="w-sm">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quasi
-              doloribus adipisci rem aliquid omnis nulla tempore labore voluptas dolorem.
+              A dedicated dive center in Barangay Sula Bacacay, Albay, currently used for
+              scuba diving sessions and activities. The facility is being developed into a
+              full training hub with direct access to open water, office support, and
+              equipment areas, with future plans to offer both recreational and commercial
+              programs.
             </p>
           </div>
         </div>
@@ -53,18 +52,14 @@ export default function FacilitiesPage() {
         </div>
         <div className="text-marine-300">
           <p className="w-sm mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, aliquid
-            pariatur eius, ipsam consectetur optio aspernatur incidunt maxime
-            exercitationem atque adipisci voluptatibus sequi doloremque consequatur
-            voluptatum, quidem velit inventore a!
-          </p>
-          <p className="w-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quasi doloribus
-            adipisci rem aliquid omnis nulla tempore labore voluptas dolorem.
+            Serving as the company’s registered base of operations. While primarily a
+            residential space, it also functions as the administrative hub for
+            coordinating projects, managing client communications, and handling day-to-day
+            business operations.
           </p>
         </div>
       </section>
-      <Carousel />
+      <Carousel images={images} />
 
       <section className="px-[8vw] md:px-[20vw] bg-foreground-100 text-marine-950 grid md:grid-cols-[1fr_40%] gap-15 items-center pt-32 pb-62">
         <div>
@@ -83,14 +78,9 @@ export default function FacilitiesPage() {
           </div>
           <div className="text-marine-800">
             <p className="w-sm mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, aliquid
-              pariatur eius, ipsam consectetur optio aspernatur incidunt maxime
-              exercitationem atque adipisci voluptatibus sequi doloremque consequatur
-              voluptatum, quidem velit inventore a!
-            </p>
-            <p className="w-sm">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius quasi
-              doloribus adipisci rem aliquid omnis nulla tempore labore voluptas dolorem.
+              Our storage and logistics area, it provides space for equipment, supplies,
+              and materials essential to operations, ensuring readiness for projects and
+              field deployment.
             </p>
           </div>
         </div>
