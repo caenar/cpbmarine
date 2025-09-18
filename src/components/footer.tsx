@@ -78,15 +78,15 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-foreground-100 mb-3">Contact</h4>
           <p className="mb-2">862 B4 Barriada, Legazpi City</p>
-          <p className="mb-2">diverconz@gmail.com</p>
+          <p className="mb-2">info@cbpmarine.com</p>
           <p>+63 917 8707 337</p>
         </div>
       </div>
 
       <div className="border-t border-marine-800 pt-6 text-sm text-center">
         <p>
-          &copy; {new Date().getFullYear()} Trident CPB Marine Services. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} Trident CPB Marine Services. All rights
+          reserved.
         </p>
       </div>
     </footer>

@@ -59,7 +59,9 @@ export default function FacilitiesPage() {
           </p>
         </div>
       </section>
-      <Carousel images={images} />
+      <div className="h-[40vh] md:h-screen">
+        <Carousel images={images} />
+      </div>
 
       <section className="px-[8vw] md:px-[20vw] bg-foreground-100 text-marine-950 grid md:grid-cols-[1fr_40%] gap-15 items-center pt-32 pb-62">
         <div>

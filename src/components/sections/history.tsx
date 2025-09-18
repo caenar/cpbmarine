@@ -123,8 +123,8 @@ export default function HistorySection() {
         ref={founderRef}
         className="flex flex-col md:flex-row items-center gap-10 px-[8vw] md:px-[20vw] mb-32"
       >
-        <div>
-          <Carousel height={400} images={images} className="md:rounded-lg"/>
+        <div className="w-full md:w-[600px]">
+          <Carousel height={400} images={images} className="rounded-lg"/>
         </div>
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">

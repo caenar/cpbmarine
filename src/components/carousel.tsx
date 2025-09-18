@@ -47,9 +47,9 @@ export default function Carousel({
   return (
     <div
       className={cn(
-        "relative md:h-screen overflow-hidden",
-        !height && "sm:h-screen",
-        !width && "sm:w-screen md:w-[600px]",
+        "relative overflow-hidden",
+        !height && "h-full",
+        !width && "w-full",
         className
       )}
       style={{ height: height ? `${height}px` : "", width: width ? `${width}px` : "" }}
