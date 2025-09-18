@@ -124,7 +124,7 @@ export default function HistorySection() {
         className="flex flex-col md:flex-row items-center gap-10 px-[8vw] md:px-[20vw] mb-32"
       >
         <div>
-          <Carousel width={600} height={400} images={images} className="rounded-lg"/>
+          <Carousel height={400} images={images} className="md:rounded-lg"/>
         </div>
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
@@ -140,7 +140,7 @@ export default function HistorySection() {
         {/* vertical line */}
         <div
           ref={timelineLineRef}
-          className="left-[50%] md:left-[50%] w-[1.2px] bg-foreground-800 h-0 absolute"
+          className="absolute md:left-[50%] w-[1.2px] bg-foreground-800 h-0"
         />
 
         {/* items */}

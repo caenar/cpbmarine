@@ -89,13 +89,12 @@ export default function AboutSection() {
     >
       <div ref={introRef} className="px-[8vw] md:px-[20vw]">
         <h2 className="font-secondary font-bold text-5xl text-balance mb-5">
-          Trusted Underwater Solutions Since 2012
+          Trusted Underwater Solutions
         </h2>
         <p className="text-foreground-600 text-lg max-w-prose">
-          Trident CBP Marine Service delivers expert underwater services — from
-          salvage and welding to scientific surveys — with a commitment to
-          quality, affordability, and safety. Proudly serving industries
-          nationwide since 2012.
+          Trident CBP Marine Service delivers expert underwater services — from salvage
+          and welding to scientific surveys — with a commitment to quality, affordability,
+          and safety. Proudly serving industries nationwide since 2012.
         </p>
       </div>
 
@@ -104,7 +103,7 @@ export default function AboutSection() {
       <div ref={missionRef} className="grid md:grid-cols-2 gap-15 px-[8vw] md:px-[20vw]">
         <div>
           <Image
-            className="rounded-lg object-cover md:h-[400px] md:w-[550px]"
+            className="rounded-lg object-cover h-[400px] md:w-[550px]"
             src="/images/2.jpeg"
             alt="Mission image"
             width={400}
@@ -114,15 +113,14 @@ export default function AboutSection() {
         <div>
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Mission</h3>
           <h2 className="font-bold text-3xl mb-5 text-balance md:max-w-lg">
-            Affordable and Reliable Marine Expertise, Delivered Safely
+            Affordable and Reliable Marine Expertise
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance md:w-lg">
-            At Trident CBP Marine Service, our mission is to deliver
-            high-quality underwater services that are accessible and
-            cost-effective, without compromising safety. Since 2012, we&apos;ve
-            supported marine operations through expert salvage, maintenance,
-            construction, and training — always guided by professionalism,
-            innovation, and a deep respect for the marine environment.
+            To deliver high-quality underwater services that are accessible and
+            cost-effective, without compromising safety. Since 2012, we&apos;ve supported
+            marine operations through expert salvage, maintenance, construction, and
+            training — always guided by professionalism, innovation, and a deep respect
+            for the marine environment.
           </p>
         </div>
       </div>
@@ -133,17 +131,17 @@ export default function AboutSection() {
         <div className="order-2 md:order-1">
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
           <h2 className="font-bold text-3xl mb-5 text-balance md:max-w-lg">
-            Setting the Standard for Safe and Affordable Underwater Solutions
+            Providing Safe and Affordable Solutions
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance md:w-lg">
-            To be the Philippines’ leading partner in reliable, affordable, and
-            safe underwater solutions — trusted by industries and institutions
-            for our commitment to service excellence and operational integrity.
+            To provide reliable, affordable, and safe underwater solutions — trusted by
+            industries and institutions for our commitment to service excellence and
+            operational integrity.
           </p>
         </div>
         <div className="order-1 md:order-2">
           <Image
-            className="rounded-lg md:h-[400px] md:w-[550px] object-cover"
+            className="rounded-lg h-[400px] md:w-[550px] object-cover"
             src="/images/services/port-maintenance/maintenance-1.JPG"
             alt="Mission image"
             width={400}

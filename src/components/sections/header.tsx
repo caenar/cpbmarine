@@ -55,7 +55,7 @@ export default function HeaderSection() {
 
           <div className="h-[2px] w-full bg-gray-100 opacity-15"></div>
 
-          <h2 className="font-secondary font-bold text-white/40 text-5xl">
+          <h2 className="font-secondary font-bold text-white/40 text-4xl md:text-5xl">
             CONRADO PAZ MARINE SERVICES
           </h2>
         </div>
