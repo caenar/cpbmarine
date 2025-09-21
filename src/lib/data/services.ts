@@ -52,7 +52,7 @@ export const services = [
   {
     title: "Scuba Diving Training",
     desc: "Professional training and certification programs in recreational diving.",
-    img: "/images/services/padi-scuba-training/1.JPG",
+    img: "/images/services/training/1.JPG",
   },
   {
     title: "General Underwater Works",
