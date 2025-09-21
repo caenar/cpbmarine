@@ -37,8 +37,6 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        {/* UXO and other obstacles clearing  */}
-
         <div className="px-[8vw] md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {services.map((service, i) => (
             <div key={i} className="flex flex-col overflow-hidden bg-marine-50">

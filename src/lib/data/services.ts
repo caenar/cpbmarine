@@ -1,5 +1,10 @@
 export const services = [
   {
+    title: "UXO & Obstacle Clearing",
+    desc: "Specialized removal of unexploded ordnance and underwater obstructions to ensure safe marine operations.",
+    img: "/images/services/uxo/1.jpeg",
+  },
+  {
     title: "Salvage & Refloating",
     desc: "Expert recovery of sunken vessels, barges, and marine equipment with safety-focused salvage operations.",
     img: "/images/services/refloating-recovery/refloating.png",
@@ -7,17 +12,17 @@ export const services = [
   {
     title: "Survey & Damage Assessment",
     desc: "Underwater inspections to assess structural damage and guide marine repair or reconstruction projects.",
-    img: "/images/services/welding/1.png",
+    img: "/images/services/welding/diver.png",
   },
   {
     title: "Ship Husbandry",
     desc: "Essential underwater maintenance services including hull cleaning, propeller polishing, and sea chest clearing.",
-    img: "/images/services/uw-cutting/4.jpg",
+    img: "/images/services/repair/1.JPG",
   },
   {
     title: "Welding & Cutting",
     desc: "Precision underwater fabrication and repair using certified divers and specialized welding equipment.",
-    img: "/images/services/uw-cutting/1.png",
+    img: "/images/services/uw-cutting/2.png",
   },
   {
     title: "Construction Support",
@@ -35,7 +40,7 @@ export const services = [
     img: "/images/services/port-maintenance/2.JPG",
   },
   {
-    title: "Non-Destructive Testing (NDT)",
+    title: "Non-Destructive Testing",
     desc: "Accurate, non-invasive inspection methods for evaluating the integrity of submerged metal and concrete assets.",
     img: "/images/services/port-maintenance/5.png",
   },
