@@ -93,13 +93,13 @@ export default function HistorySection() {
   }, []);
 
   const images = [
-    "/images/team/1.jpg",
-    "/images/team/2.jpg",
-    "/images/team/3.jpeg",
-    "/images/team/4.png",
-    "/images/team/5.png",
-    "/images/team/6.png",
-    "/images/team/7.png",
+    "/images/team/1.webp",
+    "/images/team/2.webp",
+    "/images/team/3.webp",
+    "/images/team/4.webp",
+    "/images/team/5.webp",
+    "/images/team/6.webp",
+    "/images/team/7.webp",
   ];
 
   return (
@@ -107,11 +107,14 @@ export default function HistorySection() {
       ref={sectionRef}
       className="py-32 flex flex-col"
       style={{
-        background: "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
+        background:
+          "linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(3, 23, 46, 0) 100%)",
       }}
     >
       <div ref={titleRef} className="px-[8vw] md:px-[20vw]">
-        <span className="uppercase text-3xl text-foreground-600">The History</span>
+        <span className="uppercase text-3xl text-foreground-600">
+          The History
+        </span>
         <h2 className="text-6xl md:text-7xl max-w-3xl font-secondary uppercase font-black text-balance">
           Conrado Paz Marine Trident Salvage
         </h2>
@@ -124,12 +127,12 @@ export default function HistorySection() {
         className="flex flex-col md:flex-row items-center gap-10 px-[8vw] md:px-[20vw] mb-32"
       >
         <div className="w-full md:w-[600px]">
-          <Carousel height={400} images={images} className="rounded-lg"/>
+          <Carousel height={400} images={images} className="rounded-lg" />
         </div>
         <div>
           <h3 className="text-3xl max-w-lg text-balance mb-10">
-            &quot;We started with equipment and passion — now we&apos;re shaping the
-            future of underwater services in the Philippines.&quot;
+            &quot;We started with equipment and passion — now we&apos;re shaping
+            the future of underwater services in the Philippines.&quot;
           </h3>
           <p className="font-bold">Conrado Paz</p>
           <p className="text-foreground-400">Founder, CBP Marine Solutions</p>
@@ -155,14 +158,18 @@ export default function HistorySection() {
               }}
               className={cn(
                 "self-center relative flex gap-5",
-                isMobile ? "flex" : isEven ? "flex" : "flex-row-reverse"
+                isMobile ? "flex" : isEven ? "flex" : "flex-row-reverse",
               )}
             >
               <div className="md:w-xs shrink-0">
                 <h4
                   className={cn(
                     "font-secondary font-bold text-white",
-                    isMobile ? "text-right w-[4ch]" : isEven ? "text-right" : "text-left"
+                    isMobile
+                      ? "text-right w-[4ch]"
+                      : isEven
+                        ? "text-right"
+                        : "text-left",
                   )}
                 >
                   {item.date}
@@ -177,7 +184,9 @@ export default function HistorySection() {
                 <h4 className="font-bold font-secondary text-xl text-marine-800 mb-1">
                   {item.title}
                 </h4>
-                <p className="text-foreground-600 text-sm">{item.description}</p>
+                <p className="text-foreground-600 text-sm">
+                  {item.description}
+                </p>
               </div>
             </div>
           );

@@ -92,19 +92,23 @@ export default function AboutSection() {
           Trusted Underwater Solutions
         </h2>
         <p className="text-foreground-600 text-lg max-w-prose">
-          Trident CBP Marine Service delivers expert underwater services — from salvage
-          and welding to scientific surveys — with a commitment to quality, affordability,
-          and safety. Proudly serving industries nationwide since 2012.
+          Trident CBP Marine Service delivers expert underwater services — from
+          salvage and welding to scientific surveys — with a commitment to
+          quality, affordability, and safety. Proudly serving industries
+          nationwide since 2012.
         </p>
       </div>
 
       <div ref={divider1Ref} className="w-0 h-px bg-marine-700 my-12" />
 
-      <div ref={missionRef} className="grid md:grid-cols-2 gap-15 px-[8vw] md:px-[20vw]">
+      <div
+        ref={missionRef}
+        className="grid md:grid-cols-2 gap-15 px-[8vw] md:px-[20vw]"
+      >
         <div>
           <Image
             className="rounded-lg object-cover h-[400px] md:w-[550px]"
-            src="/images/2.jpeg"
+            src="/images/2.webp"
             alt="Mission image"
             width={400}
             height={400}
@@ -117,32 +121,35 @@ export default function AboutSection() {
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance md:w-lg">
             To deliver high-quality underwater services that are accessible and
-            cost-effective, without compromising safety. Since 2012, we&apos;ve supported
-            marine operations through expert salvage, maintenance, construction, and
-            training — always guided by professionalism, innovation, and a deep respect
-            for the marine environment.
+            cost-effective, without compromising safety. Since 2012, we&apos;ve
+            supported marine operations through expert salvage, maintenance,
+            construction, and training — always guided by professionalism,
+            innovation, and a deep respect for the marine environment.
           </p>
         </div>
       </div>
 
       <div ref={divider2Ref} className="w-0 h-px bg-marine-700 my-12" />
 
-      <div ref={visionRef} className="grid md:grid-cols-2 gap-15 px-[8vw] md:px-[20vw]">
+      <div
+        ref={visionRef}
+        className="grid md:grid-cols-2 gap-15 px-[8vw] md:px-[20vw]"
+      >
         <div className="order-2 md:order-1">
           <h3 className="font-bold text-md text-gold-400 mb-1">Our Vision</h3>
           <h2 className="font-bold text-3xl mb-5 text-balance md:max-w-lg">
             Providing Safe and Affordable Solutions
           </h2>
           <p className="text-foreground-600 leading-relaxed text-balance md:w-lg">
-            To provide reliable, affordable, and safe underwater solutions — trusted by
-            industries and institutions for our commitment to service excellence and
-            operational integrity.
+            To provide reliable, affordable, and safe underwater solutions —
+            trusted by industries and institutions for our commitment to service
+            excellence and operational integrity.
           </p>
         </div>
         <div className="order-1 md:order-2">
           <Image
             className="rounded-lg h-[400px] md:w-[550px] object-cover"
-            src="/images/services/port-maintenance/maintenance-1.JPG"
+            src="/images/services/port-maintenance/13.webp"
             alt="Mission image"
             width={400}
             height={400}

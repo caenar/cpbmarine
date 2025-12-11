@@ -7,7 +7,9 @@ export default function ContactPage() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
@@ -30,14 +32,17 @@ export default function ContactPage() {
   return (
     <main className="grid md:grid-cols-[40%_1fr] min-h-screen">
       <div className="order-2 md:order-1 flex bg-foreground-100 w-full h-full items-center justify-center px-10 md:px-0">
-        <form onSubmit={handleSubmit} className="grid gap-10 md:w-lg text-marine-900">
+        <form
+          onSubmit={handleSubmit}
+          className="grid gap-10 md:w-lg text-marine-900"
+        >
           <div className="mb-2">
             <h1 className="font-secondary text-5xl font-bold mb-5">
               Let&apos;s work together
             </h1>
             <p className="text-foreground-800 text-balance">
-              Ready to take the next step? Let&apos;s collaborate, we&apos;d love to hear
-              from you.
+              Ready to take the next step? Let&apos;s collaborate, we&apos;d
+              love to hear from you.
             </p>
           </div>
           <input
@@ -83,7 +88,7 @@ export default function ContactPage() {
           </button>
         </form>
       </div>
-      <div className="order-1 md:order-2 bg-cover bg-[url('/images/services/uw-cutting/2.png')] bg-marine-300 bg-blend-multiply"></div>
+      <div className="order-1 md:order-2 bg-cover bg-[url('/images/services/uw-cutting/2.webp')] bg-marine-300 bg-blend-multiply"></div>
     </main>
   );
 }

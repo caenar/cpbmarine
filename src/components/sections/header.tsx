@@ -62,7 +62,7 @@ export default function HeaderSection() {
 
         <div className="absolute inset-0 bg-gradient-to-b from-[#03172ec5] via-transparent to-[#03172e] pointer-events-none z-2" />
 
-        <div className="absolute min-h-screen w-full bg-[url('/images/services/welding/diver.png')] bg-cover bg-center md:bg-right bg-no-repeat"></div>
+        <div className="absolute min-h-screen w-full bg-[url('/images/services/welding/diver.webp')] bg-cover bg-center md:bg-right bg-no-repeat"></div>
 
         <div className="absolute bottom-0 left-0 w-full h-full z-20 pointer-events-none">
           <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-[#01142e] to-transparent" />
@@ -72,7 +72,7 @@ export default function HeaderSection() {
       <section className="flex justify-center items-center h-screen">
         <div ref={diverRef2}>
           <Image
-            src="/images/4.png"
+            src="/images/4.webp"
             alt="Picture of scuba diver"
             width={750}
             height={750}
