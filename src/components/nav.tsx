@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowUp, ChevronDown, Menu, Phone, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { label: "Home", href: "/" },
@@ -27,7 +26,6 @@ export default function Nav() {
   const [hideNav, setHideNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showBanner, setShowBanner] = useState(true);
   const activePath = usePathname();
   const [topButtonVisible, setTopButtonVisible] = useState(false);
 
@@ -88,18 +86,7 @@ export default function Nav() {
           hideShadow ? "md:bg-marine-950" : "bg-transparent"
         )}
       >
-        <AnimatePresence>
-          {showBanner && (
-            <motion.div className="w-full bg-gold-500 text-foreground-950 col-span-2 uppercase font-bold">
-              <div className="flex items-center justify-center gap-3 px-4 py-2">
-                <span>Page Under Construction and Development</span>
-                <button onClick={() => setShowBanner(false)}>
-                  <X className="size-4.5 cursor-pointer" />
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+
 
         <div className="flex flex-wrap justify-between items-center px-5 py-4">
           <Link href="/" className="">

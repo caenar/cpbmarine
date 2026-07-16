@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import useIsMobile from "@/hooks/useIsMobile";
 import Carousel from "../carousel";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +15,6 @@ export default function HistorySection() {
   const timelineLineRef = useRef<HTMLDivElement | null>(null);
   const timelineWrappersRef = useRef<HTMLDivElement[]>([]);
   const timelineSectionRef = useRef<HTMLDivElement | null>(null);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -71,21 +69,42 @@ export default function HistorySection() {
       });
 
       timelineWrappersRef.current.forEach((wrapper) => {
-        const targets = wrapper.querySelectorAll("div, h4, p");
+        const date = wrapper.querySelector(".timeline-date");
+        const content = wrapper.querySelector(".timeline-content");
+        const dot = wrapper.querySelector(".timeline-dot");
 
-        gsap.from(targets, {
+        gsap.from([date, content], {
           opacity: 0,
-          y: 50,
-          duration: 0.7,
+          y: 40,
+          duration: 0.8,
           ease: "power2.out",
-          stagger: 0.1,
+          stagger: 0.15,
           scrollTrigger: {
             trigger: wrapper,
-            start: "top 70%",
+            start: "top 80%",
             end: "bottom 60%",
             scrub: true,
           },
         });
+
+        if (dot) {
+          gsap.fromTo(
+            dot,
+            { scale: 0, opacity: 0 },
+            {
+              scale: 1,
+              opacity: 1,
+              duration: 0.6,
+              ease: "back.out(1.7)",
+              scrollTrigger: {
+                trigger: wrapper,
+                start: "top 80%",
+                end: "top 50%",
+                scrub: true,
+              },
+            }
+          );
+        }
       });
     }, sectionRef);
 
@@ -139,11 +158,11 @@ export default function HistorySection() {
         </div>
       </div>
 
-      <div ref={timelineSectionRef} className="relative flex flex-col gap-20 ">
+      <div ref={timelineSectionRef} className="relative flex flex-col gap-12 w-full max-w-4xl mx-auto px-4 md:px-0">
         {/* vertical line */}
         <div
           ref={timelineLineRef}
-          className="absolute md:left-[50%] w-[1.2px] bg-foreground-800 h-0"
+          className="absolute left-4 -ml-[1px] md:left-1/2 md:-ml-[1px] w-[2px] bg-foreground-800 h-0"
         />
 
         {/* items */}
@@ -157,36 +176,38 @@ export default function HistorySection() {
                 if (el) timelineWrappersRef.current[idx] = el;
               }}
               className={cn(
-                "self-center relative flex gap-5",
-                isMobile ? "flex" : isEven ? "flex" : "flex-row-reverse",
+                "relative flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-4 md:gap-0",
+                isEven ? "" : "md:flex-row-reverse"
               )}
             >
-              <div className="md:w-xs shrink-0">
-                <h4
-                  className={cn(
-                    "font-secondary font-bold text-white",
-                    isMobile
-                      ? "text-right w-[4ch]"
-                      : isEven
-                        ? "text-right"
-                        : "text-left",
-                  )}
-                >
+              {/* Date Column */}
+              <div className={cn(
+                "timeline-date w-full md:w-[calc(50%-2rem)] flex md:block pl-10 md:pl-0",
+                isEven ? "md:text-right" : "md:text-left"
+              )}>
+                <h4 className="font-secondary font-bold text-white text-lg md:text-xl">
                   {item.date}
                 </h4>
               </div>
 
-              <div key={`divider-${idx}`} className="relative z-10 shrink-0">
-                <div className="bg-gold-500 rounded-full h-5 w-5 border-6 border-[rgba(3,_34,_66,_1)]" />
+              {/* Dot Column */}
+              <div className="timeline-dot absolute left-4 -ml-2 md:left-1/2 md:-ml-2.5 w-4 h-4 md:w-5 md:h-5 z-10 flex items-center justify-center">
+                <div className="bg-gold-500 rounded-full h-full w-full border-4 md:border-6 border-[rgba(3,_34,_66,_1)]" />
               </div>
 
-              <div className="w-2xs md:w-xs bg-foreground-100 py-4 px-6 rounded overflow-hidden">
-                <h4 className="font-bold font-secondary text-xl text-marine-800 mb-1">
-                  {item.title}
-                </h4>
-                <p className="text-foreground-600 text-sm">
-                  {item.description}
-                </p>
+              {/* Content Card Column */}
+              <div className="timeline-content w-full md:w-[calc(50%-2rem)] pl-10 md:pl-0">
+                <div className={cn(
+                  "bg-foreground-100 py-4 px-6 rounded-lg shadow-md",
+                  isEven ? "md:mr-auto" : "md:ml-auto"
+                )}>
+                  <h4 className="font-bold font-secondary text-lg md:text-xl text-marine-800 mb-1">
+                    {item.title}
+                  </h4>
+                  <p className="text-foreground-600 text-sm">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </div>
           );

@@ -60,11 +60,14 @@ export default function StandardSafetySection() {
             },
             onUpdate: (self) => {
               const progress = self.progress ?? 0;
-              const height = 1 + progress * 320;
+              const height = progress * 320;
               gsap.set(img, {
                 height,
                 opacity: 1 + progress,
               });
+            },
+            onLeaveBack: () => {
+              gsap.set(img, { display: "none", height: 0, opacity: 0 });
             },
           });
 
@@ -83,13 +86,16 @@ export default function StandardSafetySection() {
               });
             },
             onLeave: () => {
-              gsap.set(img, { display: "none" });
+              gsap.set(img, { display: "none", height: 0 });
             },
             onEnterBack: () => {
               gsap.set(img, {
                 display: "block",
                 opacity: 0,
               });
+            },
+            onLeaveBack: () => {
+              gsap.set(img, { display: "block", height: 320, opacity: 1 });
             },
           });
         });

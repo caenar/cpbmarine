@@ -9,9 +9,6 @@ export const testimonials = [
     name: "Mauban Power / Meralco PowerGen",
   },
   {
-    name: "Aboiitiz Power / Shipping Philippines",
-  },
-  {
     name: "Regal Arraste and Shipping Inc.",
   },
   {
